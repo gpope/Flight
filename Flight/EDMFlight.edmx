@@ -1,0 +1,1025 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="flightnetModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="flightnetModelStoreContainer">
+          <EntitySet Name="Cjenik" EntityType="flightnetModel.Store.Cjenik" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Clanarina" EntityType="flightnetModel.Store.Clanarina" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Dozvola" EntityType="flightnetModel.Store.Dozvola" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Gorivo" EntityType="flightnetModel.Store.Gorivo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Korisnik" EntityType="flightnetModel.Store.Korisnik" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Let" EntityType="flightnetModel.Store.Let" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OvlastiKorisnika" EntityType="flightnetModel.Store.OvlastiKorisnika" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Paraglajder" EntityType="flightnetModel.Store.Paraglajder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Resurs" EntityType="flightnetModel.Store.Resurs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Rezervacija" EntityType="flightnetModel.Store.Rezervacija" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StatusKorisnika" EntityType="flightnetModel.Store.StatusKorisnika" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StatusLeta" EntityType="flightnetModel.Store.StatusLeta" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StatusResursa" EntityType="flightnetModel.Store.StatusResursa" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipDozvole" EntityType="flightnetModel.Store.TipDozvole" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Zrakoplov" EntityType="flightnetModel.Store.Zrakoplov" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Cjenik_Resurs" Association="flightnetModel.Store.FK_Cjenik_Resurs">
+            <End Role="Resurs" EntitySet="Resurs" />
+            <End Role="Cjenik" EntitySet="Cjenik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Clanarina_Korisnik" Association="flightnetModel.Store.FK_Clanarina_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Clanarina" EntitySet="Clanarina" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Dozvola_Korisnik" Association="flightnetModel.Store.FK_Dozvola_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Dozvola" EntitySet="Dozvola" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Dozvola_TipDozvole" Association="flightnetModel.Store.FK_Dozvola_TipDozvole">
+            <End Role="TipDozvole" EntitySet="TipDozvole" />
+            <End Role="Dozvola" EntitySet="Dozvola" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Korisnik_OvlastiKorisnika" Association="flightnetModel.Store.FK_Korisnik_OvlastiKorisnika">
+            <End Role="OvlastiKorisnika" EntitySet="OvlastiKorisnika" />
+            <End Role="Korisnik" EntitySet="Korisnik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Korisnik_StatusKorisnika" Association="flightnetModel.Store.FK_Korisnik_StatusKorisnika">
+            <End Role="StatusKorisnika" EntitySet="StatusKorisnika" />
+            <End Role="Korisnik" EntitySet="Korisnik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Let_Korisnik" Association="flightnetModel.Store.FK_Let_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Let" EntitySet="Let" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Let_Rezervacija" Association="flightnetModel.Store.FK_Let_Rezervacija">
+            <End Role="Rezervacija" EntitySet="Rezervacija" />
+            <End Role="Let" EntitySet="Let" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Let_StatusLeta" Association="flightnetModel.Store.FK_Let_StatusLeta">
+            <End Role="StatusLeta" EntitySet="StatusLeta" />
+            <End Role="Let" EntitySet="Let" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Paraglajder_Resurs" Association="flightnetModel.Store.FK_Paraglajder_Resurs">
+            <End Role="Resurs" EntitySet="Resurs" />
+            <End Role="Paraglajder" EntitySet="Paraglajder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resurs_StatusResursa" Association="flightnetModel.Store.FK_Resurs_StatusResursa">
+            <End Role="StatusResursa" EntitySet="StatusResursa" />
+            <End Role="Resurs" EntitySet="Resurs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rezervacija_Korisnik" Association="flightnetModel.Store.FK_Rezervacija_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Rezervacija" EntitySet="Rezervacija" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rezervacija_Resurs" Association="flightnetModel.Store.FK_Rezervacija_Resurs">
+            <End Role="Resurs" EntitySet="Resurs" />
+            <End Role="Rezervacija" EntitySet="Rezervacija" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zrakoplov_Gorivo" Association="flightnetModel.Store.FK_Zrakoplov_Gorivo">
+            <End Role="Gorivo" EntitySet="Gorivo" />
+            <End Role="Zrakoplov" EntitySet="Zrakoplov" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zrakoplov_Resurs1" Association="flightnetModel.Store.FK_Zrakoplov_Resurs1">
+            <End Role="Resurs" EntitySet="Resurs" />
+            <End Role="Zrakoplov" EntitySet="Zrakoplov" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Cjenik">
+          <Key>
+            <PropertyRef Name="cjenik_ID" />
+          </Key>
+          <Property Name="cjenik_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="datum_od" Type="date" Nullable="false" />
+          <Property Name="datum_do" Type="date" Nullable="false" />
+          <Property Name="cjena" Type="float" Nullable="false" />
+          <Property Name="resurs_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Clanarina">
+          <Key>
+            <PropertyRef Name="clanarina_ID" />
+          </Key>
+          <Property Name="clanarina_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="datum_placanja" Type="date" Nullable="false" />
+          <Property Name="datum_placeno_do" Type="date" Nullable="false" />
+          <Property Name="korisnik_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Dozvola">
+          <Key>
+            <PropertyRef Name="dozvola_ID" />
+          </Key>
+          <Property Name="dozvola_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tip_dozvole_ID" Type="int" Nullable="false" />
+          <Property Name="korisnik_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Gorivo">
+          <Key>
+            <PropertyRef Name="gorivo_ID" />
+          </Key>
+          <Property Name="gorivo_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="gorivo_naziv" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Korisnik">
+          <Key>
+            <PropertyRef Name="korisnik_ID" />
+          </Key>
+          <Property Name="korisnik_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ime" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="prezime" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="adresa" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="email" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="telefon" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="oib" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="lozinka" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="status_korisnika_ID" Type="int" />
+          <Property Name="ovlasti_korisnika_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Let">
+          <Key>
+            <PropertyRef Name="let_ID" />
+          </Key>
+          <Property Name="let_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="vreme_prognoza" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="plan_leta" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="trajanje_leta" Type="time" />
+          <Property Name="gorivo_utroseno" Type="float" />
+          <Property Name="napomena" Type="varchar" MaxLength="150" />
+          <Property Name="rezervacija_ID" Type="int" Nullable="false" />
+          <Property Name="korisnik_ID" Type="int" Nullable="false" />
+          <Property Name="status_leta_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OvlastiKorisnika">
+          <Key>
+            <PropertyRef Name="ovlasti_korisnika_ID" />
+          </Key>
+          <Property Name="ovlasti_korisnika_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ovlasti_korisnika" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Paraglajder">
+          <Key>
+            <PropertyRef Name="resurs_ID" />
+          </Key>
+          <Property Name="resurs_ID" Type="int" Nullable="false" />
+          <Property Name="povrsina_krila" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Resurs">
+          <Key>
+            <PropertyRef Name="resurs_ID" />
+          </Key>
+          <Property Name="resurs_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="model" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="godina_proizvodnje" Type="date" Nullable="false" />
+          <Property Name="slika_url" Type="varchar" MaxLength="150" />
+          <Property Name="max_visina" Type="int" Nullable="false" />
+          <Property Name="max_teret" Type="float" Nullable="false" />
+          <Property Name="radni_sati" Type="int" Nullable="false" />
+          <Property Name="status_resursa_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rezervacija">
+          <Key>
+            <PropertyRef Name="rezervacija_ID" />
+          </Key>
+          <Property Name="rezervacija_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="datum" Type="date" Nullable="false" />
+          <Property Name="sati_od" Type="time" Nullable="false" />
+          <Property Name="sati_do" Type="time" Nullable="false" />
+          <Property Name="resurs_ID" Type="int" Nullable="false" />
+          <Property Name="korisnik_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StatusKorisnika">
+          <Key>
+            <PropertyRef Name="status_korisnika_ID" />
+          </Key>
+          <Property Name="status_korisnika_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="status_korisnika" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="StatusLeta">
+          <Key>
+            <PropertyRef Name="status_leta_ID" />
+          </Key>
+          <Property Name="status_leta_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="status_leta" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="StatusResursa">
+          <Key>
+            <PropertyRef Name="status_resursa_ID" />
+          </Key>
+          <Property Name="status_resursa_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="status_resursa" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TipDozvole">
+          <Key>
+            <PropertyRef Name="tip_dozvole_ID" />
+          </Key>
+          <Property Name="tip_dozvole_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tip_dozvole" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Zrakoplov">
+          <Key>
+            <PropertyRef Name="resurs_ID" />
+          </Key>
+          <Property Name="resurs_ID" Type="int" Nullable="false" />
+          <Property Name="tezina" Type="float" Nullable="false" />
+          <Property Name="duzina" Type="float" Nullable="false" />
+          <Property Name="promjer_krila" Type="float" Nullable="false" />
+          <Property Name="gorivo_spremnik" Type="float" Nullable="false" />
+          <Property Name="gorivo_stanje" Type="float" Nullable="false" />
+          <Property Name="gorivo_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Cjenik_Resurs">
+          <End Role="Resurs" Type="flightnetModel.Store.Resurs" Multiplicity="1" />
+          <End Role="Cjenik" Type="flightnetModel.Store.Cjenik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resurs">
+              <PropertyRef Name="resurs_ID" />
+            </Principal>
+            <Dependent Role="Cjenik">
+              <PropertyRef Name="resurs_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Clanarina_Korisnik">
+          <End Role="Korisnik" Type="flightnetModel.Store.Korisnik" Multiplicity="1" />
+          <End Role="Clanarina" Type="flightnetModel.Store.Clanarina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnik_ID" />
+            </Principal>
+            <Dependent Role="Clanarina">
+              <PropertyRef Name="korisnik_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Dozvola_Korisnik">
+          <End Role="Korisnik" Type="flightnetModel.Store.Korisnik" Multiplicity="1" />
+          <End Role="Dozvola" Type="flightnetModel.Store.Dozvola" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnik_ID" />
+            </Principal>
+            <Dependent Role="Dozvola">
+              <PropertyRef Name="korisnik_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Dozvola_TipDozvole">
+          <End Role="TipDozvole" Type="flightnetModel.Store.TipDozvole" Multiplicity="1" />
+          <End Role="Dozvola" Type="flightnetModel.Store.Dozvola" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipDozvole">
+              <PropertyRef Name="tip_dozvole_ID" />
+            </Principal>
+            <Dependent Role="Dozvola">
+              <PropertyRef Name="tip_dozvole_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Korisnik_OvlastiKorisnika">
+          <End Role="OvlastiKorisnika" Type="flightnetModel.Store.OvlastiKorisnika" Multiplicity="0..1" />
+          <End Role="Korisnik" Type="flightnetModel.Store.Korisnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OvlastiKorisnika">
+              <PropertyRef Name="ovlasti_korisnika_ID" />
+            </Principal>
+            <Dependent Role="Korisnik">
+              <PropertyRef Name="ovlasti_korisnika_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Korisnik_StatusKorisnika">
+          <End Role="StatusKorisnika" Type="flightnetModel.Store.StatusKorisnika" Multiplicity="0..1" />
+          <End Role="Korisnik" Type="flightnetModel.Store.Korisnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatusKorisnika">
+              <PropertyRef Name="status_korisnika_ID" />
+            </Principal>
+            <Dependent Role="Korisnik">
+              <PropertyRef Name="status_korisnika_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Let_Korisnik">
+          <End Role="Korisnik" Type="flightnetModel.Store.Korisnik" Multiplicity="1" />
+          <End Role="Let" Type="flightnetModel.Store.Let" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnik_ID" />
+            </Principal>
+            <Dependent Role="Let">
+              <PropertyRef Name="korisnik_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Let_Rezervacija">
+          <End Role="Rezervacija" Type="flightnetModel.Store.Rezervacija" Multiplicity="1" />
+          <End Role="Let" Type="flightnetModel.Store.Let" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rezervacija">
+              <PropertyRef Name="rezervacija_ID" />
+            </Principal>
+            <Dependent Role="Let">
+              <PropertyRef Name="rezervacija_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Let_StatusLeta">
+          <End Role="StatusLeta" Type="flightnetModel.Store.StatusLeta" Multiplicity="1" />
+          <End Role="Let" Type="flightnetModel.Store.Let" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatusLeta">
+              <PropertyRef Name="status_leta_ID" />
+            </Principal>
+            <Dependent Role="Let">
+              <PropertyRef Name="status_leta_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Paraglajder_Resurs">
+          <End Role="Resurs" Type="flightnetModel.Store.Resurs" Multiplicity="1" />
+          <End Role="Paraglajder" Type="flightnetModel.Store.Paraglajder" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Resurs">
+              <PropertyRef Name="resurs_ID" />
+            </Principal>
+            <Dependent Role="Paraglajder">
+              <PropertyRef Name="resurs_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resurs_StatusResursa">
+          <End Role="StatusResursa" Type="flightnetModel.Store.StatusResursa" Multiplicity="1" />
+          <End Role="Resurs" Type="flightnetModel.Store.Resurs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatusResursa">
+              <PropertyRef Name="status_resursa_ID" />
+            </Principal>
+            <Dependent Role="Resurs">
+              <PropertyRef Name="status_resursa_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rezervacija_Korisnik">
+          <End Role="Korisnik" Type="flightnetModel.Store.Korisnik" Multiplicity="1" />
+          <End Role="Rezervacija" Type="flightnetModel.Store.Rezervacija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnik_ID" />
+            </Principal>
+            <Dependent Role="Rezervacija">
+              <PropertyRef Name="korisnik_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rezervacija_Resurs">
+          <End Role="Resurs" Type="flightnetModel.Store.Resurs" Multiplicity="1" />
+          <End Role="Rezervacija" Type="flightnetModel.Store.Rezervacija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resurs">
+              <PropertyRef Name="resurs_ID" />
+            </Principal>
+            <Dependent Role="Rezervacija">
+              <PropertyRef Name="resurs_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zrakoplov_Gorivo">
+          <End Role="Gorivo" Type="flightnetModel.Store.Gorivo" Multiplicity="1" />
+          <End Role="Zrakoplov" Type="flightnetModel.Store.Zrakoplov" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gorivo">
+              <PropertyRef Name="gorivo_ID" />
+            </Principal>
+            <Dependent Role="Zrakoplov">
+              <PropertyRef Name="gorivo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zrakoplov_Resurs1">
+          <End Role="Resurs" Type="flightnetModel.Store.Resurs" Multiplicity="1" />
+          <End Role="Zrakoplov" Type="flightnetModel.Store.Zrakoplov" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Resurs">
+              <PropertyRef Name="resurs_ID" />
+            </Principal>
+            <Dependent Role="Zrakoplov">
+              <PropertyRef Name="resurs_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="flightnetModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="flightnetEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Cjenik" EntityType="flightnetModel.Cjenik" />
+          <EntitySet Name="Clanarina" EntityType="flightnetModel.Clanarina" />
+          <EntitySet Name="Dozvola" EntityType="flightnetModel.Dozvola" />
+          <EntitySet Name="Gorivo" EntityType="flightnetModel.Gorivo" />
+          <EntitySet Name="Korisnik" EntityType="flightnetModel.Korisnik" />
+          <EntitySet Name="Let" EntityType="flightnetModel.Let" />
+          <EntitySet Name="OvlastiKorisnika" EntityType="flightnetModel.OvlastiKorisnika" />
+          <EntitySet Name="Paraglajder" EntityType="flightnetModel.Paraglajder" />
+          <EntitySet Name="Resurs" EntityType="flightnetModel.Resurs" />
+          <EntitySet Name="Rezervacija" EntityType="flightnetModel.Rezervacija" />
+          <EntitySet Name="StatusKorisnika" EntityType="flightnetModel.StatusKorisnika" />
+          <EntitySet Name="StatusLeta" EntityType="flightnetModel.StatusLeta" />
+          <EntitySet Name="StatusResursa" EntityType="flightnetModel.StatusResursa" />
+          <EntitySet Name="TipDozvole" EntityType="flightnetModel.TipDozvole" />
+          <EntitySet Name="Zrakoplov" EntityType="flightnetModel.Zrakoplov" />
+          <AssociationSet Name="FK_Cjenik_Resurs" Association="flightnetModel.FK_Cjenik_Resurs">
+            <End Role="Resurs" EntitySet="Resurs" />
+            <End Role="Cjenik" EntitySet="Cjenik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Clanarina_Korisnik" Association="flightnetModel.FK_Clanarina_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Clanarina" EntitySet="Clanarina" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Dozvola_Korisnik" Association="flightnetModel.FK_Dozvola_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Dozvola" EntitySet="Dozvola" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Dozvola_TipDozvole" Association="flightnetModel.FK_Dozvola_TipDozvole">
+            <End Role="TipDozvole" EntitySet="TipDozvole" />
+            <End Role="Dozvola" EntitySet="Dozvola" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zrakoplov_Gorivo" Association="flightnetModel.FK_Zrakoplov_Gorivo">
+            <End Role="Gorivo" EntitySet="Gorivo" />
+            <End Role="Zrakoplov" EntitySet="Zrakoplov" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Korisnik_OvlastiKorisnika" Association="flightnetModel.FK_Korisnik_OvlastiKorisnika">
+            <End Role="OvlastiKorisnika" EntitySet="OvlastiKorisnika" />
+            <End Role="Korisnik" EntitySet="Korisnik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Korisnik_StatusKorisnika" Association="flightnetModel.FK_Korisnik_StatusKorisnika">
+            <End Role="StatusKorisnika" EntitySet="StatusKorisnika" />
+            <End Role="Korisnik" EntitySet="Korisnik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Let_Korisnik" Association="flightnetModel.FK_Let_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Let" EntitySet="Let" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rezervacija_Korisnik" Association="flightnetModel.FK_Rezervacija_Korisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Rezervacija" EntitySet="Rezervacija" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Let_Rezervacija" Association="flightnetModel.FK_Let_Rezervacija">
+            <End Role="Rezervacija" EntitySet="Rezervacija" />
+            <End Role="Let" EntitySet="Let" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Let_StatusLeta" Association="flightnetModel.FK_Let_StatusLeta">
+            <End Role="StatusLeta" EntitySet="StatusLeta" />
+            <End Role="Let" EntitySet="Let" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Paraglajder_Resurs" Association="flightnetModel.FK_Paraglajder_Resurs">
+            <End Role="Resurs" EntitySet="Resurs" />
+            <End Role="Paraglajder" EntitySet="Paraglajder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resurs_StatusResursa" Association="flightnetModel.FK_Resurs_StatusResursa">
+            <End Role="StatusResursa" EntitySet="StatusResursa" />
+            <End Role="Resurs" EntitySet="Resurs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rezervacija_Resurs" Association="flightnetModel.FK_Rezervacija_Resurs">
+            <End Role="Resurs" EntitySet="Resurs" />
+            <End Role="Rezervacija" EntitySet="Rezervacija" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zrakoplov_Resurs1" Association="flightnetModel.FK_Zrakoplov_Resurs1">
+            <End Role="Resurs" EntitySet="Resurs" />
+            <End Role="Zrakoplov" EntitySet="Zrakoplov" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Cjenik">
+          <Key>
+            <PropertyRef Name="cjenik_ID" />
+          </Key>
+          <Property Name="cjenik_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="datum_od" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="datum_do" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="cjena" Type="Double" Nullable="false" />
+          <Property Name="resurs_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Resurs" Relationship="flightnetModel.FK_Cjenik_Resurs" FromRole="Cjenik" ToRole="Resurs" />
+        </EntityType>
+        <EntityType Name="Clanarina">
+          <Key>
+            <PropertyRef Name="clanarina_ID" />
+          </Key>
+          <Property Name="clanarina_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="datum_placanja" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="datum_placeno_do" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="korisnik_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Korisnik" Relationship="flightnetModel.FK_Clanarina_Korisnik" FromRole="Clanarina" ToRole="Korisnik" />
+        </EntityType>
+        <EntityType Name="Dozvola">
+          <Key>
+            <PropertyRef Name="dozvola_ID" />
+          </Key>
+          <Property Name="dozvola_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="tip_dozvole_ID" Type="Int32" Nullable="false" />
+          <Property Name="korisnik_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Korisnik" Relationship="flightnetModel.FK_Dozvola_Korisnik" FromRole="Dozvola" ToRole="Korisnik" />
+          <NavigationProperty Name="TipDozvole" Relationship="flightnetModel.FK_Dozvola_TipDozvole" FromRole="Dozvola" ToRole="TipDozvole" />
+        </EntityType>
+        <EntityType Name="Gorivo">
+          <Key>
+            <PropertyRef Name="gorivo_ID" />
+          </Key>
+          <Property Name="gorivo_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="gorivo_naziv" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Zrakoplov" Relationship="flightnetModel.FK_Zrakoplov_Gorivo" FromRole="Gorivo" ToRole="Zrakoplov" />
+        </EntityType>
+        <EntityType Name="Korisnik">
+          <Key>
+            <PropertyRef Name="korisnik_ID" />
+          </Key>
+          <Property Name="korisnik_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ime" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="prezime" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="adresa" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="telefon" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="oib" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="lozinka" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="status_korisnika_ID" Type="Int32" />
+          <Property Name="ovlasti_korisnika_ID" Type="Int32" />
+          <NavigationProperty Name="Clanarina" Relationship="flightnetModel.FK_Clanarina_Korisnik" FromRole="Korisnik" ToRole="Clanarina" />
+          <NavigationProperty Name="Dozvola" Relationship="flightnetModel.FK_Dozvola_Korisnik" FromRole="Korisnik" ToRole="Dozvola" />
+          <NavigationProperty Name="OvlastiKorisnika" Relationship="flightnetModel.FK_Korisnik_OvlastiKorisnika" FromRole="Korisnik" ToRole="OvlastiKorisnika" />
+          <NavigationProperty Name="StatusKorisnika" Relationship="flightnetModel.FK_Korisnik_StatusKorisnika" FromRole="Korisnik" ToRole="StatusKorisnika" />
+          <NavigationProperty Name="Let" Relationship="flightnetModel.FK_Let_Korisnik" FromRole="Korisnik" ToRole="Let" />
+          <NavigationProperty Name="Rezervacija" Relationship="flightnetModel.FK_Rezervacija_Korisnik" FromRole="Korisnik" ToRole="Rezervacija" />
+        </EntityType>
+        <EntityType Name="Let">
+          <Key>
+            <PropertyRef Name="let_ID" />
+          </Key>
+          <Property Name="let_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="vreme_prognoza" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="plan_leta" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="trajanje_leta" Type="Time" Precision="7" />
+          <Property Name="gorivo_utroseno" Type="Double" />
+          <Property Name="napomena" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="rezervacija_ID" Type="Int32" Nullable="false" />
+          <Property Name="korisnik_ID" Type="Int32" Nullable="false" />
+          <Property Name="status_leta_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Korisnik" Relationship="flightnetModel.FK_Let_Korisnik" FromRole="Let" ToRole="Korisnik" />
+          <NavigationProperty Name="Rezervacija" Relationship="flightnetModel.FK_Let_Rezervacija" FromRole="Let" ToRole="Rezervacija" />
+          <NavigationProperty Name="StatusLeta" Relationship="flightnetModel.FK_Let_StatusLeta" FromRole="Let" ToRole="StatusLeta" />
+        </EntityType>
+        <EntityType Name="OvlastiKorisnika">
+          <Key>
+            <PropertyRef Name="ovlasti_korisnika_ID" />
+          </Key>
+          <Property Name="ovlasti_korisnika_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ovlasti_korisnika" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Korisnik" Relationship="flightnetModel.FK_Korisnik_OvlastiKorisnika" FromRole="OvlastiKorisnika" ToRole="Korisnik" />
+        </EntityType>
+        <EntityType Name="Paraglajder">
+          <Key>
+            <PropertyRef Name="resurs_ID" />
+          </Key>
+          <Property Name="resurs_ID" Type="Int32" Nullable="false" />
+          <Property Name="povrsina_krila" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Resurs" Relationship="flightnetModel.FK_Paraglajder_Resurs" FromRole="Paraglajder" ToRole="Resurs" />
+        </EntityType>
+        <EntityType Name="Resurs">
+          <Key>
+            <PropertyRef Name="resurs_ID" />
+          </Key>
+          <Property Name="resurs_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="model" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="godina_proizvodnje" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="slika_url" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="max_visina" Type="Int32" Nullable="false" />
+          <Property Name="max_teret" Type="Double" Nullable="false" />
+          <Property Name="radni_sati" Type="Int32" Nullable="false" />
+          <Property Name="status_resursa_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cjenik" Relationship="flightnetModel.FK_Cjenik_Resurs" FromRole="Resurs" ToRole="Cjenik" />
+          <NavigationProperty Name="Paraglajder" Relationship="flightnetModel.FK_Paraglajder_Resurs" FromRole="Resurs" ToRole="Paraglajder" />
+          <NavigationProperty Name="StatusResursa" Relationship="flightnetModel.FK_Resurs_StatusResursa" FromRole="Resurs" ToRole="StatusResursa" />
+          <NavigationProperty Name="Rezervacija" Relationship="flightnetModel.FK_Rezervacija_Resurs" FromRole="Resurs" ToRole="Rezervacija" />
+          <NavigationProperty Name="Zrakoplov" Relationship="flightnetModel.FK_Zrakoplov_Resurs1" FromRole="Resurs" ToRole="Zrakoplov" />
+        </EntityType>
+        <EntityType Name="Rezervacija">
+          <Key>
+            <PropertyRef Name="rezervacija_ID" />
+          </Key>
+          <Property Name="rezervacija_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="resurs_ID" Type="Int32" Nullable="false" />
+          <Property Name="korisnik_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Korisnik" Relationship="flightnetModel.FK_Rezervacija_Korisnik" FromRole="Rezervacija" ToRole="Korisnik" />
+          <NavigationProperty Name="Let" Relationship="flightnetModel.FK_Let_Rezervacija" FromRole="Rezervacija" ToRole="Let" />
+          <NavigationProperty Name="Resurs" Relationship="flightnetModel.FK_Rezervacija_Resurs" FromRole="Rezervacija" ToRole="Resurs" />
+          <Property Type="DateTime" Name="datum" Nullable="false" Precision="0" />
+          <Property Type="Time" Name="sati_od" Nullable="false" Precision="7" />
+          <Property Type="Time" Name="sati_do" Nullable="false" Precision="7" />
+        </EntityType>
+        <EntityType Name="StatusKorisnika">
+          <Key>
+            <PropertyRef Name="status_korisnika_ID" />
+          </Key>
+          <Property Name="status_korisnika_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="status_korisnika" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Korisnik" Relationship="flightnetModel.FK_Korisnik_StatusKorisnika" FromRole="StatusKorisnika" ToRole="Korisnik" />
+        </EntityType>
+        <EntityType Name="StatusLeta">
+          <Key>
+            <PropertyRef Name="status_leta_ID" />
+          </Key>
+          <Property Name="status_leta_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="status_leta" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Let" Relationship="flightnetModel.FK_Let_StatusLeta" FromRole="StatusLeta" ToRole="Let" />
+        </EntityType>
+        <EntityType Name="StatusResursa">
+          <Key>
+            <PropertyRef Name="status_resursa_ID" />
+          </Key>
+          <Property Name="status_resursa_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="status_resursa" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Resurs" Relationship="flightnetModel.FK_Resurs_StatusResursa" FromRole="StatusResursa" ToRole="Resurs" />
+        </EntityType>
+        <EntityType Name="TipDozvole">
+          <Key>
+            <PropertyRef Name="tip_dozvole_ID" />
+          </Key>
+          <Property Name="tip_dozvole_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="tip_dozvole" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Dozvola" Relationship="flightnetModel.FK_Dozvola_TipDozvole" FromRole="TipDozvole" ToRole="Dozvola" />
+        </EntityType>
+        <EntityType Name="Zrakoplov">
+          <Key>
+            <PropertyRef Name="resurs_ID" />
+          </Key>
+          <Property Name="resurs_ID" Type="Int32" Nullable="false" />
+          <Property Name="tezina" Type="Double" Nullable="false" />
+          <Property Name="duzina" Type="Double" Nullable="false" />
+          <Property Name="promjer_krila" Type="Double" Nullable="false" />
+          <Property Name="gorivo_stanje" Type="Double" Nullable="false" />
+          <Property Name="gorivo_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Gorivo" Relationship="flightnetModel.FK_Zrakoplov_Gorivo" FromRole="Zrakoplov" ToRole="Gorivo" />
+          <NavigationProperty Name="Resurs" Relationship="flightnetModel.FK_Zrakoplov_Resurs1" FromRole="Zrakoplov" ToRole="Resurs" />
+          <Property Type="Double" Name="gorivo_spremnik" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Cjenik_Resurs">
+          <End Role="Resurs" Type="flightnetModel.Resurs" Multiplicity="1" />
+          <End Role="Cjenik" Type="flightnetModel.Cjenik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resurs">
+              <PropertyRef Name="resurs_ID" />
+            </Principal>
+            <Dependent Role="Cjenik">
+              <PropertyRef Name="resurs_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Clanarina_Korisnik">
+          <End Role="Korisnik" Type="flightnetModel.Korisnik" Multiplicity="1" />
+          <End Role="Clanarina" Type="flightnetModel.Clanarina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnik_ID" />
+            </Principal>
+            <Dependent Role="Clanarina">
+              <PropertyRef Name="korisnik_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Dozvola_Korisnik">
+          <End Role="Korisnik" Type="flightnetModel.Korisnik" Multiplicity="1" />
+          <End Role="Dozvola" Type="flightnetModel.Dozvola" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnik_ID" />
+            </Principal>
+            <Dependent Role="Dozvola">
+              <PropertyRef Name="korisnik_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Dozvola_TipDozvole">
+          <End Role="TipDozvole" Type="flightnetModel.TipDozvole" Multiplicity="1" />
+          <End Role="Dozvola" Type="flightnetModel.Dozvola" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipDozvole">
+              <PropertyRef Name="tip_dozvole_ID" />
+            </Principal>
+            <Dependent Role="Dozvola">
+              <PropertyRef Name="tip_dozvole_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zrakoplov_Gorivo">
+          <End Role="Gorivo" Type="flightnetModel.Gorivo" Multiplicity="1" />
+          <End Role="Zrakoplov" Type="flightnetModel.Zrakoplov" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gorivo">
+              <PropertyRef Name="gorivo_ID" />
+            </Principal>
+            <Dependent Role="Zrakoplov">
+              <PropertyRef Name="gorivo_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Korisnik_OvlastiKorisnika">
+          <End Role="OvlastiKorisnika" Type="flightnetModel.OvlastiKorisnika" Multiplicity="0..1" />
+          <End Role="Korisnik" Type="flightnetModel.Korisnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OvlastiKorisnika">
+              <PropertyRef Name="ovlasti_korisnika_ID" />
+            </Principal>
+            <Dependent Role="Korisnik">
+              <PropertyRef Name="ovlasti_korisnika_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Korisnik_StatusKorisnika">
+          <End Role="StatusKorisnika" Type="flightnetModel.StatusKorisnika" Multiplicity="0..1" />
+          <End Role="Korisnik" Type="flightnetModel.Korisnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatusKorisnika">
+              <PropertyRef Name="status_korisnika_ID" />
+            </Principal>
+            <Dependent Role="Korisnik">
+              <PropertyRef Name="status_korisnika_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Let_Korisnik">
+          <End Role="Korisnik" Type="flightnetModel.Korisnik" Multiplicity="1" />
+          <End Role="Let" Type="flightnetModel.Let" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnik_ID" />
+            </Principal>
+            <Dependent Role="Let">
+              <PropertyRef Name="korisnik_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rezervacija_Korisnik">
+          <End Role="Korisnik" Type="flightnetModel.Korisnik" Multiplicity="1" />
+          <End Role="Rezervacija" Type="flightnetModel.Rezervacija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="korisnik_ID" />
+            </Principal>
+            <Dependent Role="Rezervacija">
+              <PropertyRef Name="korisnik_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Let_Rezervacija">
+          <End Role="Rezervacija" Type="flightnetModel.Rezervacija" Multiplicity="1" />
+          <End Role="Let" Type="flightnetModel.Let" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rezervacija">
+              <PropertyRef Name="rezervacija_ID" />
+            </Principal>
+            <Dependent Role="Let">
+              <PropertyRef Name="rezervacija_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Let_StatusLeta">
+          <End Role="StatusLeta" Type="flightnetModel.StatusLeta" Multiplicity="1" />
+          <End Role="Let" Type="flightnetModel.Let" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatusLeta">
+              <PropertyRef Name="status_leta_ID" />
+            </Principal>
+            <Dependent Role="Let">
+              <PropertyRef Name="status_leta_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Paraglajder_Resurs">
+          <End Role="Resurs" Type="flightnetModel.Resurs" Multiplicity="1" />
+          <End Role="Paraglajder" Type="flightnetModel.Paraglajder" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Resurs">
+              <PropertyRef Name="resurs_ID" />
+            </Principal>
+            <Dependent Role="Paraglajder">
+              <PropertyRef Name="resurs_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resurs_StatusResursa">
+          <End Role="StatusResursa" Type="flightnetModel.StatusResursa" Multiplicity="1" />
+          <End Role="Resurs" Type="flightnetModel.Resurs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatusResursa">
+              <PropertyRef Name="status_resursa_ID" />
+            </Principal>
+            <Dependent Role="Resurs">
+              <PropertyRef Name="status_resursa_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rezervacija_Resurs">
+          <End Role="Resurs" Type="flightnetModel.Resurs" Multiplicity="1" />
+          <End Role="Rezervacija" Type="flightnetModel.Rezervacija" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resurs">
+              <PropertyRef Name="resurs_ID" />
+            </Principal>
+            <Dependent Role="Rezervacija">
+              <PropertyRef Name="resurs_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zrakoplov_Resurs1">
+          <End Role="Resurs" Type="flightnetModel.Resurs" Multiplicity="1" />
+          <End Role="Zrakoplov" Type="flightnetModel.Zrakoplov" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Resurs">
+              <PropertyRef Name="resurs_ID" />
+            </Principal>
+            <Dependent Role="Zrakoplov">
+              <PropertyRef Name="resurs_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="flightnetModelStoreContainer" CdmEntityContainer="flightnetEntities">
+          <EntitySetMapping Name="Cjenik">
+            <EntityTypeMapping TypeName="flightnetModel.Cjenik">
+              <MappingFragment StoreEntitySet="Cjenik">
+                <ScalarProperty Name="cjenik_ID" ColumnName="cjenik_ID" />
+                <ScalarProperty Name="datum_od" ColumnName="datum_od" />
+                <ScalarProperty Name="datum_do" ColumnName="datum_do" />
+                <ScalarProperty Name="cjena" ColumnName="cjena" />
+                <ScalarProperty Name="resurs_ID" ColumnName="resurs_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clanarina">
+            <EntityTypeMapping TypeName="flightnetModel.Clanarina">
+              <MappingFragment StoreEntitySet="Clanarina">
+                <ScalarProperty Name="clanarina_ID" ColumnName="clanarina_ID" />
+                <ScalarProperty Name="datum_placanja" ColumnName="datum_placanja" />
+                <ScalarProperty Name="datum_placeno_do" ColumnName="datum_placeno_do" />
+                <ScalarProperty Name="korisnik_ID" ColumnName="korisnik_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Dozvola">
+            <EntityTypeMapping TypeName="flightnetModel.Dozvola">
+              <MappingFragment StoreEntitySet="Dozvola">
+                <ScalarProperty Name="dozvola_ID" ColumnName="dozvola_ID" />
+                <ScalarProperty Name="tip_dozvole_ID" ColumnName="tip_dozvole_ID" />
+                <ScalarProperty Name="korisnik_ID" ColumnName="korisnik_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gorivo">
+            <EntityTypeMapping TypeName="flightnetModel.Gorivo">
+              <MappingFragment StoreEntitySet="Gorivo">
+                <ScalarProperty Name="gorivo_ID" ColumnName="gorivo_ID" />
+                <ScalarProperty Name="gorivo_naziv" ColumnName="gorivo_naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Korisnik">
+            <EntityTypeMapping TypeName="flightnetModel.Korisnik">
+              <MappingFragment StoreEntitySet="Korisnik">
+                <ScalarProperty Name="korisnik_ID" ColumnName="korisnik_ID" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+                <ScalarProperty Name="adresa" ColumnName="adresa" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="oib" ColumnName="oib" />
+                <ScalarProperty Name="lozinka" ColumnName="lozinka" />
+                <ScalarProperty Name="status_korisnika_ID" ColumnName="status_korisnika_ID" />
+                <ScalarProperty Name="ovlasti_korisnika_ID" ColumnName="ovlasti_korisnika_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Let">
+            <EntityTypeMapping TypeName="flightnetModel.Let">
+              <MappingFragment StoreEntitySet="Let">
+                <ScalarProperty Name="let_ID" ColumnName="let_ID" />
+                <ScalarProperty Name="vreme_prognoza" ColumnName="vreme_prognoza" />
+                <ScalarProperty Name="plan_leta" ColumnName="plan_leta" />
+                <ScalarProperty Name="trajanje_leta" ColumnName="trajanje_leta" />
+                <ScalarProperty Name="gorivo_utroseno" ColumnName="gorivo_utroseno" />
+                <ScalarProperty Name="napomena" ColumnName="napomena" />
+                <ScalarProperty Name="rezervacija_ID" ColumnName="rezervacija_ID" />
+                <ScalarProperty Name="korisnik_ID" ColumnName="korisnik_ID" />
+                <ScalarProperty Name="status_leta_ID" ColumnName="status_leta_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OvlastiKorisnika">
+            <EntityTypeMapping TypeName="flightnetModel.OvlastiKorisnika">
+              <MappingFragment StoreEntitySet="OvlastiKorisnika">
+                <ScalarProperty Name="ovlasti_korisnika_ID" ColumnName="ovlasti_korisnika_ID" />
+                <ScalarProperty Name="ovlasti_korisnika" ColumnName="ovlasti_korisnika" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Paraglajder">
+            <EntityTypeMapping TypeName="flightnetModel.Paraglajder">
+              <MappingFragment StoreEntitySet="Paraglajder">
+                <ScalarProperty Name="resurs_ID" ColumnName="resurs_ID" />
+                <ScalarProperty Name="povrsina_krila" ColumnName="povrsina_krila" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Resurs">
+            <EntityTypeMapping TypeName="flightnetModel.Resurs">
+              <MappingFragment StoreEntitySet="Resurs">
+                <ScalarProperty Name="resurs_ID" ColumnName="resurs_ID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="model" ColumnName="model" />
+                <ScalarProperty Name="godina_proizvodnje" ColumnName="godina_proizvodnje" />
+                <ScalarProperty Name="slika_url" ColumnName="slika_url" />
+                <ScalarProperty Name="max_visina" ColumnName="max_visina" />
+                <ScalarProperty Name="max_teret" ColumnName="max_teret" />
+                <ScalarProperty Name="radni_sati" ColumnName="radni_sati" />
+                <ScalarProperty Name="status_resursa_ID" ColumnName="status_resursa_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rezervacija">
+            <EntityTypeMapping TypeName="flightnetModel.Rezervacija">
+              <MappingFragment StoreEntitySet="Rezervacija">
+                <ScalarProperty Name="sati_do" ColumnName="sati_do" />
+                <ScalarProperty Name="sati_od" ColumnName="sati_od" />
+                <ScalarProperty Name="datum" ColumnName="datum" />
+                <ScalarProperty Name="rezervacija_ID" ColumnName="rezervacija_ID" />
+                <ScalarProperty Name="resurs_ID" ColumnName="resurs_ID" />
+                <ScalarProperty Name="korisnik_ID" ColumnName="korisnik_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StatusKorisnika">
+            <EntityTypeMapping TypeName="flightnetModel.StatusKorisnika">
+              <MappingFragment StoreEntitySet="StatusKorisnika">
+                <ScalarProperty Name="status_korisnika_ID" ColumnName="status_korisnika_ID" />
+                <ScalarProperty Name="status_korisnika" ColumnName="status_korisnika" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StatusLeta">
+            <EntityTypeMapping TypeName="flightnetModel.StatusLeta">
+              <MappingFragment StoreEntitySet="StatusLeta">
+                <ScalarProperty Name="status_leta_ID" ColumnName="status_leta_ID" />
+                <ScalarProperty Name="status_leta" ColumnName="status_leta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StatusResursa">
+            <EntityTypeMapping TypeName="flightnetModel.StatusResursa">
+              <MappingFragment StoreEntitySet="StatusResursa">
+                <ScalarProperty Name="status_resursa_ID" ColumnName="status_resursa_ID" />
+                <ScalarProperty Name="status_resursa" ColumnName="status_resursa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipDozvole">
+            <EntityTypeMapping TypeName="flightnetModel.TipDozvole">
+              <MappingFragment StoreEntitySet="TipDozvole">
+                <ScalarProperty Name="tip_dozvole_ID" ColumnName="tip_dozvole_ID" />
+                <ScalarProperty Name="tip_dozvole" ColumnName="tip_dozvole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Zrakoplov">
+            <EntityTypeMapping TypeName="flightnetModel.Zrakoplov">
+              <MappingFragment StoreEntitySet="Zrakoplov">
+                <ScalarProperty Name="gorivo_spremnik" ColumnName="gorivo_spremnik" />
+                <ScalarProperty Name="resurs_ID" ColumnName="resurs_ID" />
+                <ScalarProperty Name="tezina" ColumnName="tezina" />
+                <ScalarProperty Name="duzina" ColumnName="duzina" />
+                <ScalarProperty Name="promjer_krila" ColumnName="promjer_krila" />
+                <ScalarProperty Name="gorivo_stanje" ColumnName="gorivo_stanje" />
+                <ScalarProperty Name="gorivo_ID" ColumnName="gorivo_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

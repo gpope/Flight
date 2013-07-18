@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="04f067c899174f888ad0f42a269c5a27" Name="Diagram1">
+        <EntityTypeShape EntityType="flightnetModel.Cjenik" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="flightnetModel.Clanarina" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flightnetModel.Dozvola" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flightnetModel.Gorivo" Width="1.5" PointX="6" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="flightnetModel.Korisnik" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flightnetModel.Let" Width="1.5" PointX="8.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="flightnetModel.OvlastiKorisnika" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="flightnetModel.Paraglajder" Width="1.5" PointX="5.25" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="flightnetModel.Resurs" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="flightnetModel.Rezervacija" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="flightnetModel.StatusKorisnika" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="flightnetModel.StatusLeta" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="flightnetModel.StatusResursa" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="flightnetModel.TipDozvole" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="flightnetModel.Zrakoplov" Width="1.5" PointX="8.25" PointY="11.375" IsExpanded="true" />
+        <AssociationConnector Association="flightnetModel.FK_Cjenik_Resurs" ManuallyRouted="false" />
+        <AssociationConnector Association="flightnetModel.FK_Clanarina_Korisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="flightnetModel.FK_Dozvola_Korisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="flightnetModel.FK_Dozvola_TipDozvole" ManuallyRouted="false" />
+        <AssociationConnector Association="flightnetModel.FK_Zrakoplov_Gorivo" ManuallyRouted="false" />
+        <AssociationConnector Association="flightnetModel.FK_Korisnik_OvlastiKorisnika" ManuallyRouted="false" />
+        <AssociationConnector Association="flightnetModel.FK_Korisnik_StatusKorisnika" ManuallyRouted="false" />
+        <AssociationConnector Association="flightnetModel.FK_Let_Korisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="flightnetModel.FK_Rezervacija_Korisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="flightnetModel.FK_Let_Rezervacija" ManuallyRouted="false" />
+        <AssociationConnector Association="flightnetModel.FK_Let_StatusLeta" ManuallyRouted="false" />
+        <AssociationConnector Association="flightnetModel.FK_Paraglajder_Resurs" ManuallyRouted="false" />
+        <AssociationConnector Association="flightnetModel.FK_Resurs_StatusResursa" ManuallyRouted="false" />
+        <AssociationConnector Association="flightnetModel.FK_Rezervacija_Resurs" ManuallyRouted="false" />
+        <AssociationConnector Association="flightnetModel.FK_Zrakoplov_Resurs1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

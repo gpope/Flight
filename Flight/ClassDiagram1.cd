@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Flight.CatalogForms.frmAktivnosti" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAACAAABAAAACAAAACAAgAAAAgAAAACAAAAAA=</HashCode>
+      <FileName>CatalogForms\frmAktivnosti.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.CatalogForms.frmCjenik" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAQCBAAACEAABAAAACAgIACAAAgAADgAABCAAIAABA=</HashCode>
+      <FileName>CatalogForms\frmCjenik.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.CatalogForms.frmClanarine" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CatalogForms\frmClanarine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.CatalogForms.frmKorisnici" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAAEgEAACAAAACAAAQAgCgJAAAAAAAABA=</HashCode>
+      <FileName>CatalogForms\frmKorisnici.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.CatalogForms.frmLetovi" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IACAABEABCBAQIgIQAiAAhACAAAACIMgAAAAAAABAAA=</HashCode>
+      <FileName>CatalogForms\frmLetovi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.CatalogForms.frmNoviKorisnik" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADQIAEQEACgAAEIBQAiUAAIiAAAACACkAAEoIAAAA6A=</HashCode>
+      <FileName>CatalogForms\frmNoviKorisnik.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.CatalogForms.frmNoviLetniZapis" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIEQACQAACAAIEAACECEAQICAAAgQAKgAABQAAAAAAA=</HashCode>
+      <FileName>CatalogForms\frmNoviLetniZapis.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.CatalogForms.frmNoviParaglajder" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iISDCABAAGEBCAEBAACQAAAmAAIAAECiAAEAgEEAAgA=</HashCode>
+      <FileName>CatalogForms\frmNoviParaglajder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.CatalogForms.frmNoviZrakoplov" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iISTCBBoAOEAAAEQRBCQDAAGAAAAAECgAAEAgAEEEhA=</HashCode>
+      <FileName>CatalogForms\frmNoviZrakoplov.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.CatalogForms.frmOsobniPodaci" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAIAEQEAiAAAEIBAAiEAgIiAAAACAAkAAAIIAAAAKI=</HashCode>
+      <FileName>CatalogForms\frmOsobniPodaci.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.CatalogForms.frmParaglajderi">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAUAAQAACAAAAAAAACAAAECAAAIEACgAAAAAgAgAAA=</HashCode>
+      <FileName>CatalogForms\frmParaglajderi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.CatalogForms.frmRezervacije" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAMAEBCAAKAAAAgAQCiAgpACAAAACgAgAAAAAEIAAAA=</HashCode>
+      <FileName>CatalogForms\frmRezervacije.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.CatalogForms.frmZatvoriLetniZapis" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIEQACgAACAAIEAACCCEAYKCAAAgAAKgAABQAAAAAgA=</HashCode>
+      <FileName>CatalogForms\frmZatvoriLetniZapis.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.CatalogForms.frmZrakoplovi" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAgACAAAAAAAACAAAACAgAQAADoIAAAEAAAAIA=</HashCode>
+      <FileName>CatalogForms\frmZrakoplovi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.flightnetEntities" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAEIABAAAgIAAAEAAGAkABAAAAEEAAAgA=</HashCode>
+      <FileName>EDMFlight.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.Cjenik" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAABEAAAAAAAAAAAAAAEAAEEAAAAAA=</HashCode>
+      <FileName>Cjenik.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.Clanarina" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAFAAAAAAAAAEA=</HashCode>
+      <FileName>Clanarina.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.Dozvola" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAEACABAAAAAAAQAAA=</HashCode>
+      <FileName>Dozvola.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.Gorivo" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAgAAAAAACA=</HashCode>
+      <FileName>Gorivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.Korisnik" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAEAAABAELAhAAAAAAAAAAACAmAIAAAAAAAAAgQ=</HashCode>
+      <FileName>Korisnik.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.Let" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAQAAAIAAAEAAAAAAEAAAAQAAAAiABCgAAAAABAAA=</HashCode>
+      <FileName>Let.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.OvlastiKorisnika" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAIQ=</HashCode>
+      <FileName>OvlastiKorisnika.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.Paraglajder" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECAAAAA=</HashCode>
+      <FileName>Paraglajder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.Resurs" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAABAAAAAAAIAIAABkIAIQAAAAQgAAAAAAAEAIAAA=</HashCode>
+      <FileName>Resurs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.Rezervacija" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAABAAAAAAAIAABAAAAAAAAAAAACABAgAAEAAAAAA=</HashCode>
+      <FileName>Rezervacija.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.StatusKorisnika" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAIAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>StatusKorisnika.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.StatusLeta" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAgAAAAAAQAA=</HashCode>
+      <FileName>StatusLeta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.StatusResursa" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAEIAAAAA=</HashCode>
+      <FileName>StatusResursa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.TipDozvole" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>TipDozvole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.Zrakoplov" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABABAIgAAAAAAAAAAAQAAAAAAAAAAABAAAEAACACA=</HashCode>
+      <FileName>Zrakoplov.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.frmLogin" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAAAAAAAACAAAAHIAABAAAgAAAAAIBABCA=</HashCode>
+      <FileName>frmLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.frmMain" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JAAkAkQABDQQQIELQADIAQCjSBFSpYghSSqCAgIIigE=</HashCode>
+      <FileName>frmMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.frmOFlightu" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>frmOflightu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.GlobalHelper" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAEAAACAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>GlobalHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.Program" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.Properties.Resources" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAJEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight.Properties.Settings" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

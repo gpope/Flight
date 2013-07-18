@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16E0C522-CB65-4D43-B312-F74834590409}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Flight</RootNamespace>
+    <AssemblyName>Flight</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CatalogForms\frmAktivnosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogForms\frmAktivnosti.Designer.cs">
+      <DependentUpon>frmAktivnosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogForms\frmCjenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogForms\frmCjenik.Designer.cs">
+      <DependentUpon>frmCjenik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogForms\frmClanarine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogForms\frmClanarine.Designer.cs">
+      <DependentUpon>frmClanarine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogForms\frmKorisnici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogForms\frmKorisnici.Designer.cs">
+      <DependentUpon>frmKorisnici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogForms\frmLetovi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogForms\frmLetovi.Designer.cs">
+      <DependentUpon>frmLetovi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogForms\frmNoviKorisnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogForms\frmNoviKorisnik.Designer.cs">
+      <DependentUpon>frmNoviKorisnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogForms\frmNoviLetniZapis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogForms\frmNoviLetniZapis.Designer.cs">
+      <DependentUpon>frmNoviLetniZapis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogForms\frmNoviParaglajder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogForms\frmNoviParaglajder.Designer.cs">
+      <DependentUpon>frmNoviParaglajder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogForms\frmNoviZrakoplov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogForms\frmNoviZrakoplov.Designer.cs">
+      <DependentUpon>frmNoviZrakoplov.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogForms\frmOsobniPodaci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogForms\frmOsobniPodaci.Designer.cs">
+      <DependentUpon>frmOsobniPodaci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogForms\frmParaglajderi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogForms\frmParaglajderi.Designer.cs">
+      <DependentUpon>frmParaglajderi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogForms\frmRezervacije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogForms\frmRezervacije.Designer.cs">
+      <DependentUpon>frmRezervacije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogForms\frmZatvoriLetniZapis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogForms\frmZatvoriLetniZapis.Designer.cs">
+      <DependentUpon>frmZatvoriLetniZapis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogForms\frmZrakoplovi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatalogForms\frmZrakoplovi.Designer.cs">
+      <DependentUpon>frmZrakoplovi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cjenik.cs">
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Clanarina.cs">
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dozvola.cs">
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMFlight.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDMFlight.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMFlight.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDMFlight.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDMFlight.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOflightu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOflightu.Designer.cs">
+      <DependentUpon>frmOflightu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalHelper.cs" />
+    <Compile Include="Gorivo.cs">
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnik.cs">
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Let.cs">
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OvlastiKorisnika.cs">
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Paraglajder.cs">
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resurs.cs">
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Rezervacija.cs">
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatusKorisnika.cs">
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatusLeta.cs">
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatusResursa.cs">
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipDozvole.cs">
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Zrakoplov.cs">
+      <DependentUpon>EDMFlight.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CatalogForms\frmAktivnosti.resx">
+      <DependentUpon>frmAktivnosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogForms\frmCjenik.resx">
+      <DependentUpon>frmCjenik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogForms\frmClanarine.resx">
+      <DependentUpon>frmClanarine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogForms\frmKorisnici.resx">
+      <DependentUpon>frmKorisnici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogForms\frmLetovi.resx">
+      <DependentUpon>frmLetovi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogForms\frmNoviKorisnik.resx">
+      <DependentUpon>frmNoviKorisnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogForms\frmNoviLetniZapis.resx">
+      <DependentUpon>frmNoviLetniZapis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogForms\frmNoviParaglajder.resx">
+      <DependentUpon>frmNoviParaglajder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogForms\frmNoviZrakoplov.resx">
+      <DependentUpon>frmNoviZrakoplov.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogForms\frmOsobniPodaci.resx">
+      <DependentUpon>frmOsobniPodaci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogForms\frmParaglajderi.resx">
+      <DependentUpon>frmParaglajderi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogForms\frmRezervacije.resx">
+      <DependentUpon>frmRezervacije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogForms\frmZatvoriLetniZapis.resx">
+      <DependentUpon>frmZatvoriLetniZapis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatalogForms\frmZrakoplovi.resx">
+      <DependentUpon>frmZrakoplovi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOflightu.resx">
+      <DependentUpon>frmOflightu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="EDMFlight.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EDMFlight.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="EDMFlight.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EDMFlight.edmx</DependentUpon>
+      <LastGenOutput>EDMFlight.Context.cs</LastGenOutput>
+    </None>
+    <None Include="EDMFlight.edmx.diagram">
+      <DependentUpon>EDMFlight.edmx</DependentUpon>
+    </None>
+    <None Include="EDMFlight.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EDMFlight.edmx</DependentUpon>
+      <LastGenOutput>EDMFlight.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\flightnetEntities.datasource" />
+    <None Include="Properties\DataSources\OvlastiKorisnika.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Piper-sport.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
