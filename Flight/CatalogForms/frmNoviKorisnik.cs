@@ -22,7 +22,9 @@ namespace Flight.CatalogForms
 
         flightnetEntities contex = new flightnetEntities();
 
-        //Spremanje novog korisnika u db
+        /// <summary>
+        /// Snima novog korisnika u bazu podataka
+        /// </summary>
         private void spremiNovogKorisnika() {
             
             Korisnik k = new Korisnik();
@@ -34,18 +36,20 @@ namespace Flight.CatalogForms
                 k.adresa = tbAdresa.Text.Trim();
                 k.email = tbEmail.Text.Trim();
                 k.telefon = tbTelefon.Text.Trim();
-                //k.oib = int.Parse(tbOib.Text);
                 k.oib = tbOib.Text.Trim();
                 k.status_korisnika_ID = (cbStatusKorisnika.SelectedValue as StatusKorisnika).status_korisnika_ID;
                 k.ovlasti_korisnika_ID = (cbOvlastiKorisnika.SelectedValue as OvlastiKorisnika).ovlasti_korisnika_ID;
 
                 contex.Korisnik.Add(k);
                 contex.SaveChanges();
-                //GlobalHelper.clearControls(c);
+    
                 this.Close();                  
         
         }
 
+        /// <summary>
+        /// Popunjava formu s podacima o selektiranom korisniku
+        /// </summary>
         private void napuniSelektiranog() {
             Korisnik ki = (from kr in contex.Korisnik
                           where kr.korisnik_ID == idk
@@ -64,7 +68,9 @@ namespace Flight.CatalogForms
             
         }
 
-        //Ažuriranje korisnika
+        /// <summary>
+        /// Ažurira postojećeg korisnika
+        /// </summary>
         private void azurirajKorisnika() {
             Korisnik ki = (from kr in contex.Korisnik
                            where kr.korisnik_ID == idk
@@ -75,18 +81,24 @@ namespace Flight.CatalogForms
             ki.adresa = tbAdresa.Text.Trim();
             ki.email = tbEmail.Text.Trim();
             ki.telefon = tbTelefon.Text.Trim();
-            //k.oib = int.Parse(tbOib.Text);
             ki.oib = tbOib.Text.Trim();
             ki.status_korisnika_ID = (cbStatusKorisnika.SelectedValue as StatusKorisnika).status_korisnika_ID;
             ki.ovlasti_korisnika_ID = (cbOvlastiKorisnika.SelectedValue as OvlastiKorisnika).ovlasti_korisnika_ID;
             
             contex.SaveChanges();
-            //GlobalHelper.clearControls(c);
+       
             this.Close(); 
         }
 
+        /// <summary>
+        /// Klikom na Spremi, provjerava da li su su svi textbox-ovi popunjeni, mjenja boju pozadine za
+        /// nepopunjeni textbox koji ima najmanji TabIndex, te ovisno o ID-u sprema ili ažurira korisnika
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bSpremiNovogKorisnika_Click(object sender, EventArgs e)
         {
+
             foreach (TextBox t in c.Controls.OfType<TextBox>().OrderBy(x => x.TabIndex))
             {
                 
@@ -109,6 +121,12 @@ namespace Flight.CatalogForms
                 azurirajKorisnika();
         }
 
+        /// <summary>
+        /// Kada se forma Load-a, popunjavaju se combobox-evi,
+        /// te ako je korisnik selektiran popunjava se forma s podacima o selektiranom korisniku
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmNoviKorisnik_Load(object sender, EventArgs e)
         {
             napuniComboBox();
@@ -116,7 +134,9 @@ namespace Flight.CatalogForms
                 napuniSelektiranog();
         }
         
-        //Napuni combo boxes iz db
+        /// <summary>
+        /// Popunjava combobox-eve, koji nude mogućnost izbora ovlasti i statusa korisnika
+        /// </summary>
         private void napuniComboBox() { 
 
             var statusi = (from s in contex.StatusKorisnika select s).ToList();

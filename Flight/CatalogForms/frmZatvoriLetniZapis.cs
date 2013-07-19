@@ -10,8 +10,14 @@ using System.Windows.Forms;
 
 namespace Flight.CatalogForms
 {
+    /// <summary>
+    /// Nakon završetka leta kontrolor zatvara letni zapis
+    /// </summary>
     public partial class frmZatvoriLetniZapis : Form
     {
+        /// <summary>
+        /// ID selektiranog letnog zapisa
+        /// </summary>
         int idk;
 
         public frmZatvoriLetniZapis(int id)
@@ -21,12 +27,15 @@ namespace Flight.CatalogForms
         }
         flightnetEntities contex = new flightnetEntities();
 
+
+        /// <summary>
+        /// Popunjava formu s podacima o selektiranom letnom zapisu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmZatvoriLetniZapis_Load(object sender, EventArgs e)
         {
-            Let l = (from a in contex.Let 
-                    // join k in contex.Korisnik on a.korisnik_ID equals k.korisnik_ID
-                     //join r in contex.Rezervacija on a.rezervacija_ID equals r.rezervacija_ID
-                     where a.let_ID == idk select a).FirstOrDefault();
+            Let l = (from a in contex.Let where a.let_ID == idk select a).FirstOrDefault();
 
             tbLetID.Text = idk.ToString();
             tbRezervacijaID.Text = l.rezervacija_ID.ToString();
@@ -35,19 +44,21 @@ namespace Flight.CatalogForms
             
             tbVremenskaPrognoza.Text = l.vreme_prognoza;
             tbPlanLeta.Text = l.plan_leta;
-            tbNapomena.Text = l.napomena;
-            
-           
+            tbNapomena.Text = l.napomena;          
         }
 
+
+        /// <summary>
+        /// Nakon završetka leta, letni zapis se popunjava s potrebnim podacima 
+        /// i zatvara mjenjajem statusa leta u završen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bSpremi_Click(object sender, EventArgs e)
         {
             Let l = (from a in contex.Let where a.let_ID == idk select a).FirstOrDefault();
 
-
-            //l.trajanje_leta = TimeSpan.Parse(tbTrajanjeLeta.Text);
             l.trajanje_leta = TimeSpan.Parse(dtpTrajanjeLeta.Text);
-            //l.gorivo_utroseno = float.Parse(tbGorivoUtroseno.Text);
             l.gorivo_utroseno = float.Parse(nupGorivoUtoseno.Value.ToString());
             l.napomena = tbNapomena.Text;
             l.status_leta_ID = 2;

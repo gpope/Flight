@@ -42,7 +42,7 @@
             this.dgwKorisnici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwKorisnici.Location = new System.Drawing.Point(12, 12);
             this.dgwKorisnici.Name = "dgwKorisnici";
-            this.dgwKorisnici.Size = new System.Drawing.Size(776, 376);
+            this.dgwKorisnici.Size = new System.Drawing.Size(750, 308);
             this.dgwKorisnici.TabIndex = 8;
             this.dgwKorisnici.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwKorisnici_RowHeaderMouseClick);
             // 
@@ -81,7 +81,7 @@
             this.c.Controls.Add(this.bNoviKorisnik);
             this.c.Controls.Add(this.bObrisiKorisnika);
             this.c.Controls.Add(this.bIzmjeniKorisnika);
-            this.c.Location = new System.Drawing.Point(539, 394);
+            this.c.Location = new System.Drawing.Point(513, 326);
             this.c.Name = "c";
             this.c.Size = new System.Drawing.Size(249, 32);
             this.c.TabIndex = 22;
@@ -90,7 +90,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 438);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(777, 370);
             this.Controls.Add(this.c);
             this.Controls.Add(this.dgwKorisnici);
             this.Name = "frmKorisnici";

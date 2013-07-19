@@ -21,15 +21,23 @@ namespace Flight
 {
     class GlobalHelper
     {
-       //Podaci o korisniku logiranom u sustav
+        /// <summary>
+        /// Imamo tri vrste korisnika: administrator, kontrolor leta i član kluba s različitm razinama ovlasti
+        /// </summary>
         public enum TipOvlasti { Admin = 3, Kontrolor = 2, Član = 1 };
         public static TipOvlasti trenutna { get; set; }
+
+        /// <summary>
+        /// Podaci o korisniku ulogiranom u sustav
+        /// </summary>
         public static string prezime;
         public static string ime;
         public static int userID;
-               
-        //Briše podatke iz forme 
 
+        /// <summary>
+        /// Briše sadržaj textbox-ova
+        /// </summary>
+        /// <param name="c">panel unutar kojeg se nalaze textbox-ovima</param>
         public static void clearControls(Control c) {
             foreach(TextBox t in c.Controls.OfType<TextBox>()){
                 t.Text = "";

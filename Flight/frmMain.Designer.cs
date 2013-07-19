@@ -35,6 +35,7 @@
             this.korisniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zrakoploviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paraglajderiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cjenikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.letoviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rezervacijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.letniZapisiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +63,6 @@
             this.flpAdmin = new System.Windows.Forms.FlowLayoutPanel();
             this.bCjenik = new System.Windows.Forms.Button();
             this.bNagrade = new System.Windows.Forms.Button();
-            this.cjenikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMain.SuspendLayout();
             this.flpMainClanovi.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -129,6 +129,13 @@
             this.paraglajderiToolStripMenuItem.Text = "Paraglajderi";
             this.paraglajderiToolStripMenuItem.Click += new System.EventHandler(this.paraglajderiToolStripMenuItem_Click);
             // 
+            // cjenikToolStripMenuItem
+            // 
+            this.cjenikToolStripMenuItem.Name = "cjenikToolStripMenuItem";
+            this.cjenikToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.cjenikToolStripMenuItem.Text = "Cjenik";
+            this.cjenikToolStripMenuItem.Click += new System.EventHandler(this.cjenikToolStripMenuItem_Click);
+            // 
             // letoviToolStripMenuItem
             // 
             this.letoviToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -141,14 +148,14 @@
             // rezervacijeToolStripMenuItem
             // 
             this.rezervacijeToolStripMenuItem.Name = "rezervacijeToolStripMenuItem";
-            this.rezervacijeToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.rezervacijeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.rezervacijeToolStripMenuItem.Text = "Rezervacije";
             this.rezervacijeToolStripMenuItem.Click += new System.EventHandler(this.rezervacijeToolStripMenuItem_Click);
             // 
             // letniZapisiToolStripMenuItem
             // 
             this.letniZapisiToolStripMenuItem.Name = "letniZapisiToolStripMenuItem";
-            this.letniZapisiToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.letniZapisiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.letniZapisiToolStripMenuItem.Text = "Letni zapisi";
             this.letniZapisiToolStripMenuItem.Click += new System.EventHandler(this.letniZapisiToolStripMenuItem_Click);
             // 
@@ -389,13 +396,6 @@
             this.bNagrade.UseVisualStyleBackColor = true;
             this.bNagrade.Click += new System.EventHandler(this.bNagrade_Click);
             // 
-            // cjenikToolStripMenuItem
-            // 
-            this.cjenikToolStripMenuItem.Name = "cjenikToolStripMenuItem";
-            this.cjenikToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.cjenikToolStripMenuItem.Text = "Cjenik";
-            this.cjenikToolStripMenuItem.Click += new System.EventHandler(this.cjenikToolStripMenuItem_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,6 +406,7 @@
             this.Controls.Add(this.flpMainClanovi);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.msMain);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.msMain;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

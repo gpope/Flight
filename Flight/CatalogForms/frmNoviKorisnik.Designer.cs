@@ -271,7 +271,7 @@
             this.Controls.Add(this.tbKorisnik_ID);
             this.Controls.Add(this.lKorisnik_ID);
             this.Name = "frmNoviKorisnik";
-            this.Text = "frmNoviKorisnik";
+            this.Text = "Novi korisnik";
             this.Load += new System.EventHandler(this.frmNoviKorisnik_Load);
             this.c.ResumeLayout(false);
             this.c.PerformLayout();

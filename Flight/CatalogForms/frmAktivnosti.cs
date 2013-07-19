@@ -18,7 +18,9 @@ namespace Flight.CatalogForms
             InitializeComponent();
         }
         flightnetEntities contex = new flightnetEntities();
-
+        /// <summary>
+        /// Učitava popis korisnika i ukupan broj sati letenja za pojedinog korisnika
+        /// </summary>
         private void frmAktivnosti_Load(object sender, EventArgs e)
         {
             //Treba zbrojiti vrijednosti trajanja letova
@@ -32,7 +34,6 @@ namespace Flight.CatalogForms
                       }
             ).ToList();
             
-
             dgvAktivnosti.DataSource = ak;
         }
     }

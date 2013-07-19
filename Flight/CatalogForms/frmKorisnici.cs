@@ -15,10 +15,17 @@ namespace Flight.CatalogForms
         public frmKorisnici()
         {
             InitializeComponent();
+
         }
         
         flightnetEntities contex = new flightnetEntities();
 
+        /// <summary>
+        /// Za korisnike s ovlastima Član kluba i kontrolor ne prikazuje panel c koji sadrži
+        /// dugmad s dugmadima za kreiranje Novog, izmjenu postojećeg i brisanje postojećeg korisnika
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmKorisnici_Load(object sender, EventArgs e)
         {
             refreshGrid();
@@ -32,6 +39,9 @@ namespace Flight.CatalogForms
             }
         }
 
+        /// <summary>
+        ///Popunjava dataGridView s podacima o korisnicima
+        /// </summary>
         public void refreshGrid(){
             var korisnici = (from k in contex.Korisnik 
                              join o in contex.OvlastiKorisnika on k.ovlasti_korisnika_ID equals o.ovlasti_korisnika_ID
@@ -40,7 +50,11 @@ namespace Flight.CatalogForms
             dgwKorisnici.DataSource = korisnici;
     
         }
-
+        /// <summary>
+        /// Otvara formu s poljima za unos podataka o novom korisniku
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bNoviKorisnik_Click(object sender, EventArgs e)
         {
             int id = 0;
@@ -49,13 +63,18 @@ namespace Flight.CatalogForms
             refreshGrid();
         }
 
-        //Selektiramo korisnika - redak u datagridview-u
+        //Selektiramo korisnika - redak u DataGridview-u
         private void dgwKorisnici_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int id = int.Parse(dgwKorisnici.SelectedRows[0].Cells[0].Value.ToString());
            
         }
 
+        /// <summary>
+        /// Izmjena podataka o selektiranom korisniku
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bIzmjeniKorisnika_Click(object sender, EventArgs e)
         {
             //ako nije selektiran korisnik za izmjenu
@@ -73,6 +92,11 @@ namespace Flight.CatalogForms
             }
         }
 
+        /// <summary>
+        /// Brisanje selektrianog korisnika
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bObrisiKorisnika_Click(object sender, EventArgs e)
         {
             //ako nije selektiran korisnik za izmjenu
@@ -83,7 +107,6 @@ namespace Flight.CatalogForms
             //ako je korisnik selektiran
             else
             {
-                //Korisnik bk = new Korisnik();
                 int id = int.Parse(dgwKorisnici.SelectedRows[0].Cells[0].Value.ToString());
                 var result = (from kzb in contex.Korisnik where kzb.korisnik_ID == id select kzb);
 
@@ -96,8 +119,6 @@ namespace Flight.CatalogForms
                 refreshGrid();
             }
         }
-
-
 
     }
 }

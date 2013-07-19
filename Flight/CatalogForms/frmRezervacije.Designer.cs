@@ -44,7 +44,7 @@
             // 
             // dtpDatumRezervacije
             // 
-            this.dtpDatumRezervacije.Location = new System.Drawing.Point(120, 41);
+            this.dtpDatumRezervacije.Location = new System.Drawing.Point(120, 12);
             this.dtpDatumRezervacije.Name = "dtpDatumRezervacije";
             this.dtpDatumRezervacije.Size = new System.Drawing.Size(147, 20);
             this.dtpDatumRezervacije.TabIndex = 1;
@@ -53,7 +53,7 @@
             // lDatumRezervacije
             // 
             this.lDatumRezervacije.AutoSize = true;
-            this.lDatumRezervacije.Location = new System.Drawing.Point(19, 47);
+            this.lDatumRezervacije.Location = new System.Drawing.Point(19, 12);
             this.lDatumRezervacije.Name = "lDatumRezervacije";
             this.lDatumRezervacije.Size = new System.Drawing.Size(95, 13);
             this.lDatumRezervacije.TabIndex = 7;
@@ -62,7 +62,7 @@
             // lPocetakVrijeme
             // 
             this.lPocetakVrijeme.AutoSize = true;
-            this.lPocetakVrijeme.Location = new System.Drawing.Point(22, 292);
+            this.lPocetakVrijeme.Location = new System.Drawing.Point(22, 248);
             this.lPocetakVrijeme.Name = "lPocetakVrijeme";
             this.lPocetakVrijeme.Size = new System.Drawing.Size(92, 13);
             this.lPocetakVrijeme.TabIndex = 8;
@@ -71,7 +71,7 @@
             // lKrajVrijeme
             // 
             this.lKrajVrijeme.AutoSize = true;
-            this.lKrajVrijeme.Location = new System.Drawing.Point(44, 318);
+            this.lKrajVrijeme.Location = new System.Drawing.Point(44, 274);
             this.lKrajVrijeme.Name = "lKrajVrijeme";
             this.lKrajVrijeme.Size = new System.Drawing.Size(70, 13);
             this.lKrajVrijeme.TabIndex = 9;
@@ -80,7 +80,7 @@
             // lResurs
             // 
             this.lResurs.AutoSize = true;
-            this.lResurs.Location = new System.Drawing.Point(71, 169);
+            this.lResurs.Location = new System.Drawing.Point(71, 112);
             this.lResurs.Name = "lResurs";
             this.lResurs.Size = new System.Drawing.Size(43, 13);
             this.lResurs.TabIndex = 10;
@@ -90,23 +90,23 @@
             // 
             this.dgvRezervacije.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvRezervacije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRezervacije.Location = new System.Drawing.Point(288, 22);
+            this.dgvRezervacije.Location = new System.Drawing.Point(288, 12);
             this.dgvRezervacije.Name = "dgvRezervacije";
             this.dgvRezervacije.RowHeadersWidth = 42;
-            this.dgvRezervacije.Size = new System.Drawing.Size(500, 404);
+            this.dgvRezervacije.Size = new System.Drawing.Size(477, 346);
             this.dgvRezervacije.TabIndex = 11;
             // 
             // lbResursi
             // 
             this.lbResursi.FormattingEnabled = true;
-            this.lbResursi.Location = new System.Drawing.Point(120, 84);
+            this.lbResursi.Location = new System.Drawing.Point(120, 38);
             this.lbResursi.Name = "lbResursi";
             this.lbResursi.Size = new System.Drawing.Size(147, 186);
             this.lbResursi.TabIndex = 2;
             // 
             // bRezerviraj
             // 
-            this.bRezerviraj.Location = new System.Drawing.Point(192, 362);
+            this.bRezerviraj.Location = new System.Drawing.Point(189, 306);
             this.bRezerviraj.Name = "bRezerviraj";
             this.bRezerviraj.Size = new System.Drawing.Size(75, 23);
             this.bRezerviraj.TabIndex = 5;
@@ -116,7 +116,7 @@
             // 
             // bPonisti
             // 
-            this.bPonisti.Location = new System.Drawing.Point(111, 362);
+            this.bPonisti.Location = new System.Drawing.Point(108, 306);
             this.bPonisti.Name = "bPonisti";
             this.bPonisti.Size = new System.Drawing.Size(75, 23);
             this.bPonisti.TabIndex = 6;
@@ -127,7 +127,7 @@
             // dtpPocetakVrijeme
             // 
             this.dtpPocetakVrijeme.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpPocetakVrijeme.Location = new System.Drawing.Point(120, 289);
+            this.dtpPocetakVrijeme.Location = new System.Drawing.Point(120, 242);
             this.dtpPocetakVrijeme.Name = "dtpPocetakVrijeme";
             this.dtpPocetakVrijeme.ShowUpDown = true;
             this.dtpPocetakVrijeme.Size = new System.Drawing.Size(147, 20);
@@ -138,7 +138,7 @@
             // 
             this.dtpKrajVrijeme.CustomFormat = "";
             this.dtpKrajVrijeme.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpKrajVrijeme.Location = new System.Drawing.Point(120, 318);
+            this.dtpKrajVrijeme.Location = new System.Drawing.Point(120, 268);
             this.dtpKrajVrijeme.Name = "dtpKrajVrijeme";
             this.dtpKrajVrijeme.ShowUpDown = true;
             this.dtpKrajVrijeme.Size = new System.Drawing.Size(147, 20);
@@ -149,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 438);
+            this.ClientSize = new System.Drawing.Size(777, 370);
             this.Controls.Add(this.dtpKrajVrijeme);
             this.Controls.Add(this.dtpPocetakVrijeme);
             this.Controls.Add(this.bPonisti);
