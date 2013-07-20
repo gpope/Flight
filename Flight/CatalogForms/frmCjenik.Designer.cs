@@ -144,7 +144,7 @@
             this.dgvCjenik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCjenik.Location = new System.Drawing.Point(246, 53);
             this.dgvCjenik.Name = "dgvCjenik";
-            this.dgvCjenik.Size = new System.Drawing.Size(542, 259);
+            this.dgvCjenik.Size = new System.Drawing.Size(519, 299);
             this.dgvCjenik.TabIndex = 11;
             // 
             // c
@@ -167,21 +167,20 @@
             this.c1.Controls.Add(this.lID);
             this.c1.Location = new System.Drawing.Point(15, 12);
             this.c1.Name = "c1";
-            this.c1.Size = new System.Drawing.Size(200, 34);
+            this.c1.Size = new System.Drawing.Size(130, 34);
             this.c1.TabIndex = 13;
             // 
             // frmCjenik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 438);
+            this.ClientSize = new System.Drawing.Size(777, 370);
             this.Controls.Add(this.c1);
             this.Controls.Add(this.c);
             this.Controls.Add(this.dgvCjenik);
             this.Controls.Add(this.lbResurs);
             this.Controls.Add(this.label2);
             this.Name = "frmCjenik";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cjenik";
             this.Load += new System.EventHandler(this.frmCjenik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCjenik)).EndInit();

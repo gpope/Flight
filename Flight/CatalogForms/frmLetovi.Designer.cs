@@ -68,7 +68,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(744, 287);
+            this.tabPage1.Size = new System.Drawing.Size(744, 319);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Rezervacije";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -164,7 +164,6 @@
             this.ClientSize = new System.Drawing.Size(777, 370);
             this.Controls.Add(this.tcLetovi);
             this.Name = "frmLetovi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Letni zapisi";
             this.Load += new System.EventHandler(this.frmLetovi_Load);
             this.tcLetovi.ResumeLayout(false);

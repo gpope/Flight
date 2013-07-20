@@ -266,7 +266,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 345);
+            this.ClientSize = new System.Drawing.Size(777, 370);
             this.Controls.Add(this.c);
             this.Controls.Add(this.tbKorisnik_ID);
             this.Controls.Add(this.lKorisnik_ID);

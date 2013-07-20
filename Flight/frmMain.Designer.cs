@@ -77,8 +77,9 @@
             this.letoviToolStripMenuItem,
             this.pomoćToolStripMenuItem});
             this.msMain.Location = new System.Drawing.Point(0, 0);
+            this.msMain.MdiWindowListItem = this.fileToolStripMenuItem;
             this.msMain.Name = "msMain";
-            this.msMain.Size = new System.Drawing.Size(800, 24);
+            this.msMain.Size = new System.Drawing.Size(895, 24);
             this.msMain.TabIndex = 0;
             this.msMain.Text = "msMain";
             // 
@@ -148,14 +149,14 @@
             // rezervacijeToolStripMenuItem
             // 
             this.rezervacijeToolStripMenuItem.Name = "rezervacijeToolStripMenuItem";
-            this.rezervacijeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rezervacijeToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.rezervacijeToolStripMenuItem.Text = "Rezervacije";
             this.rezervacijeToolStripMenuItem.Click += new System.EventHandler(this.rezervacijeToolStripMenuItem_Click);
             // 
             // letniZapisiToolStripMenuItem
             // 
             this.letniZapisiToolStripMenuItem.Name = "letniZapisiToolStripMenuItem";
-            this.letniZapisiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.letniZapisiToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.letniZapisiToolStripMenuItem.Text = "Letni zapisi";
             this.letniZapisiToolStripMenuItem.Click += new System.EventHandler(this.letniZapisiToolStripMenuItem_Click);
             // 
@@ -170,7 +171,7 @@
             // oFlightNETToolStripMenuItem
             // 
             this.oFlightNETToolStripMenuItem.Name = "oFlightNETToolStripMenuItem";
-            this.oFlightNETToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.oFlightNETToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.oFlightNETToolStripMenuItem.Text = "O Flight.NET";
             this.oFlightNETToolStripMenuItem.Click += new System.EventHandler(this.oFlightNETToolStripMenuItem_Click);
             // 
@@ -183,7 +184,7 @@
             this.flpMainClanovi.Controls.Add(this.bOsobno);
             this.flpMainClanovi.Controls.Add(this.bCijene);
             this.flpMainClanovi.Controls.Add(this.bNagradeO);
-            this.flpMainClanovi.Location = new System.Drawing.Point(57, 86);
+            this.flpMainClanovi.Location = new System.Drawing.Point(105, 106);
             this.flpMainClanovi.Name = "flpMainClanovi";
             this.flpMainClanovi.Size = new System.Drawing.Size(682, 190);
             this.flpMainClanovi.TabIndex = 1;
@@ -293,10 +294,10 @@
             this.tsslPrezime,
             this.toolStripStatusLabel2,
             this.tsslStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 416);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 487);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(895, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "ss";
             // 
@@ -371,7 +372,7 @@
             this.flpAdmin.Controls.Add(this.bClanarine);
             this.flpAdmin.Controls.Add(this.bCjenik);
             this.flpAdmin.Controls.Add(this.bNagrade);
-            this.flpAdmin.Location = new System.Drawing.Point(70, 318);
+            this.flpAdmin.Location = new System.Drawing.Point(120, 348);
             this.flpAdmin.Name = "flpAdmin";
             this.flpAdmin.Size = new System.Drawing.Size(649, 85);
             this.flpAdmin.TabIndex = 3;
@@ -401,7 +402,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 438);
+            this.ClientSize = new System.Drawing.Size(895, 509);
             this.Controls.Add(this.flpAdmin);
             this.Controls.Add(this.flpMainClanovi);
             this.Controls.Add(this.statusStrip1);
@@ -447,7 +448,6 @@
         private System.Windows.Forms.ToolStripStatusLabel tsslStatus;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Button bOsobno;
-        private System.Windows.Forms.ToolStripMenuItem oFlightNETToolStripMenuItem;
         private System.Windows.Forms.FlowLayoutPanel flpAdmin;
         private System.Windows.Forms.Button bKorisnici;
         private System.Windows.Forms.Button bZrakoplovi;
@@ -461,5 +461,6 @@
         private System.Windows.Forms.Button bNagradeO;
         private System.Windows.Forms.Button bParaglajder;
         private System.Windows.Forms.ToolStripMenuItem cjenikToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem oFlightNETToolStripMenuItem;
     }
 }

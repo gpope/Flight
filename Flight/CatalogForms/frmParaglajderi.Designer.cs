@@ -42,7 +42,7 @@
             this.dgwParaglajderi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwParaglajderi.Location = new System.Drawing.Point(13, 13);
             this.dgwParaglajderi.Name = "dgwParaglajderi";
-            this.dgwParaglajderi.Size = new System.Drawing.Size(775, 363);
+            this.dgwParaglajderi.Size = new System.Drawing.Size(752, 307);
             this.dgwParaglajderi.TabIndex = 0;
             // 
             // c
@@ -50,7 +50,7 @@
             this.c.Controls.Add(this.bObrisiParaglajder);
             this.c.Controls.Add(this.bIzmjeniParaglajder);
             this.c.Controls.Add(this.bNoviParaglajder);
-            this.c.Location = new System.Drawing.Point(538, 382);
+            this.c.Location = new System.Drawing.Point(515, 326);
             this.c.Name = "c";
             this.c.Size = new System.Drawing.Size(250, 32);
             this.c.TabIndex = 1;
@@ -89,11 +89,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 438);
+            this.ClientSize = new System.Drawing.Size(777, 370);
             this.Controls.Add(this.c);
             this.Controls.Add(this.dgwParaglajderi);
             this.Name = "frmParaglajderi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Paraglajderi";
             this.Load += new System.EventHandler(this.frmParaglajderi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwParaglajderi)).EndInit();

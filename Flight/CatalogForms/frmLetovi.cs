@@ -104,10 +104,18 @@ namespace Flight.CatalogForms
             {
                 int id = int.Parse(dgwRezervacije.SelectedRows[0].Cells[0].Value.ToString());
                 CatalogForms.frmNoviLetniZapis nlz = new CatalogForms.frmNoviLetniZapis(id);
-                nlz.ShowDialog();
-                
+                nlz.MdiParent = this.MdiParent;
+                nlz.Show();
+                nlz.FormClosed += new FormClosedEventHandler(nlz_FormClosed);
+                //refreshGridAktivniLetovi();
             }
             refreshGridAktivniLetovi();
+        }
+
+        void nlz_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            refreshGridAktivniLetovi();
+            //throw new NotImplementedException();
         }
 
         private void bZatvoriLetniZapis_Click(object sender, EventArgs e)
@@ -119,10 +127,19 @@ namespace Flight.CatalogForms
             else {
                 int id = int.Parse(dgwAktivniLetovi.SelectedRows[0].Cells[0].Value.ToString());
                 CatalogForms.frmZatvoriLetniZapis zlz = new CatalogForms.frmZatvoriLetniZapis(id);
-                zlz.ShowDialog();
-                refreshGridAktivniLetovi();
-                refreshGridZavrseniLetovi();
+                zlz.MdiParent = this.MdiParent;
+                zlz.Show();
+                zlz.FormClosed += new FormClosedEventHandler(zlz_FormClosed);
+                //refreshGridAktivniLetovi();
+                //refreshGridZavrseniLetovi();
             }
+        }
+
+        void zlz_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            refreshGridAktivniLetovi();
+            refreshGridZavrseniLetovi();
+            //throw new NotImplementedException();
         }
        
 

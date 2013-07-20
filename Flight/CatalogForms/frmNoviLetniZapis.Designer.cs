@@ -50,7 +50,7 @@
             // lVremenskaPrognoza
             // 
             this.lVremenskaPrognoza.AutoSize = true;
-            this.lVremenskaPrognoza.Location = new System.Drawing.Point(17, 114);
+            this.lVremenskaPrognoza.Location = new System.Drawing.Point(17, 101);
             this.lVremenskaPrognoza.Name = "lVremenskaPrognoza";
             this.lVremenskaPrognoza.Size = new System.Drawing.Size(110, 13);
             this.lVremenskaPrognoza.TabIndex = 0;
@@ -59,7 +59,7 @@
             // lPlanLeta
             // 
             this.lPlanLeta.AutoSize = true;
-            this.lPlanLeta.Location = new System.Drawing.Point(76, 176);
+            this.lPlanLeta.Location = new System.Drawing.Point(76, 148);
             this.lPlanLeta.Name = "lPlanLeta";
             this.lPlanLeta.Size = new System.Drawing.Size(51, 13);
             this.lPlanLeta.TabIndex = 1;
@@ -68,7 +68,7 @@
             // lTrajanjeLeta
             // 
             this.lTrajanjeLeta.AutoSize = true;
-            this.lTrajanjeLeta.Location = new System.Drawing.Point(59, 239);
+            this.lTrajanjeLeta.Location = new System.Drawing.Point(59, 185);
             this.lTrajanjeLeta.Name = "lTrajanjeLeta";
             this.lTrajanjeLeta.Size = new System.Drawing.Size(68, 13);
             this.lTrajanjeLeta.TabIndex = 2;
@@ -77,7 +77,7 @@
             // lGorivoUtroseno
             // 
             this.lGorivoUtroseno.AutoSize = true;
-            this.lGorivoUtroseno.Location = new System.Drawing.Point(42, 265);
+            this.lGorivoUtroseno.Location = new System.Drawing.Point(42, 211);
             this.lGorivoUtroseno.Name = "lGorivoUtroseno";
             this.lGorivoUtroseno.Size = new System.Drawing.Size(85, 13);
             this.lGorivoUtroseno.TabIndex = 3;
@@ -86,7 +86,7 @@
             // lNapomena
             // 
             this.lNapomena.AutoSize = true;
-            this.lNapomena.Location = new System.Drawing.Point(65, 311);
+            this.lNapomena.Location = new System.Drawing.Point(65, 250);
             this.lNapomena.Name = "lNapomena";
             this.lNapomena.Size = new System.Drawing.Size(62, 13);
             this.lNapomena.TabIndex = 4;
@@ -97,20 +97,20 @@
             this.tbVremenskaPrognoza.Location = new System.Drawing.Point(147, 86);
             this.tbVremenskaPrognoza.Multiline = true;
             this.tbVremenskaPrognoza.Name = "tbVremenskaPrognoza";
-            this.tbVremenskaPrognoza.Size = new System.Drawing.Size(293, 71);
+            this.tbVremenskaPrognoza.Size = new System.Drawing.Size(293, 43);
             this.tbVremenskaPrognoza.TabIndex = 5;
             // 
             // tbPlanLeta
             // 
-            this.tbPlanLeta.Location = new System.Drawing.Point(147, 163);
+            this.tbPlanLeta.Location = new System.Drawing.Point(147, 135);
             this.tbPlanLeta.Multiline = true;
             this.tbPlanLeta.Name = "tbPlanLeta";
-            this.tbPlanLeta.Size = new System.Drawing.Size(293, 67);
+            this.tbPlanLeta.Size = new System.Drawing.Size(293, 41);
             this.tbPlanLeta.TabIndex = 6;
             // 
             // tbTrajanjeLeta
             // 
-            this.tbTrajanjeLeta.Location = new System.Drawing.Point(147, 236);
+            this.tbTrajanjeLeta.Location = new System.Drawing.Point(147, 182);
             this.tbTrajanjeLeta.Name = "tbTrajanjeLeta";
             this.tbTrajanjeLeta.ReadOnly = true;
             this.tbTrajanjeLeta.Size = new System.Drawing.Size(149, 20);
@@ -118,7 +118,7 @@
             // 
             // tbGorivoUtroseno
             // 
-            this.tbGorivoUtroseno.Location = new System.Drawing.Point(147, 262);
+            this.tbGorivoUtroseno.Location = new System.Drawing.Point(147, 208);
             this.tbGorivoUtroseno.Name = "tbGorivoUtroseno";
             this.tbGorivoUtroseno.ReadOnly = true;
             this.tbGorivoUtroseno.Size = new System.Drawing.Size(149, 20);
@@ -126,11 +126,11 @@
             // 
             // tbNapomena
             // 
-            this.tbNapomena.Location = new System.Drawing.Point(147, 288);
+            this.tbNapomena.Location = new System.Drawing.Point(147, 234);
             this.tbNapomena.Multiline = true;
             this.tbNapomena.Name = "tbNapomena";
             this.tbNapomena.ReadOnly = true;
-            this.tbNapomena.Size = new System.Drawing.Size(293, 75);
+            this.tbNapomena.Size = new System.Drawing.Size(293, 47);
             this.tbNapomena.TabIndex = 9;
             // 
             // tbRezervacijaID
@@ -169,7 +169,7 @@
             // 
             // bSpremi
             // 
-            this.bSpremi.Location = new System.Drawing.Point(365, 369);
+            this.bSpremi.Location = new System.Drawing.Point(365, 315);
             this.bSpremi.Name = "bSpremi";
             this.bSpremi.Size = new System.Drawing.Size(75, 23);
             this.bSpremi.TabIndex = 18;
@@ -198,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 415);
+            this.ClientSize = new System.Drawing.Size(777, 370);
             this.Controls.Add(this.lLetjelica);
             this.Controls.Add(this.tbLetjelica);
             this.Controls.Add(this.bSpremi);

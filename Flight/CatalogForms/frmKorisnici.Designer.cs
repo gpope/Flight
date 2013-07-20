@@ -95,7 +95,6 @@
             this.Controls.Add(this.c);
             this.Controls.Add(this.dgwKorisnici);
             this.Name = "frmKorisnici";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Korisnici";
             this.Load += new System.EventHandler(this.frmKorisnici_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwKorisnici)).EndInit();

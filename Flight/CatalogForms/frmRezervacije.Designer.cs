@@ -162,7 +162,6 @@
             this.Controls.Add(this.lDatumRezervacije);
             this.Controls.Add(this.dtpDatumRezervacije);
             this.Name = "frmRezervacije";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rezervacije";
             this.Load += new System.EventHandler(this.frmRezervacije_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRezervacije)).EndInit();

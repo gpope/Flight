@@ -38,6 +38,7 @@ namespace Flight
                 else
                 {
                     tbLozinka.BackColor = Color.White;
+                    bLogin.Focus();
                     
                     //Provjera korisničkog imena i lozinke u bazi
 

@@ -136,7 +136,7 @@
             // lTezina
             // 
             this.lTezina.AutoSize = true;
-            this.lTezina.Location = new System.Drawing.Point(74, 195);
+            this.lTezina.Location = new System.Drawing.Point(388, 13);
             this.lTezina.Name = "lTezina";
             this.lTezina.Size = new System.Drawing.Size(42, 13);
             this.lTezina.TabIndex = 8;
@@ -145,7 +145,7 @@
             // lDuzina
             // 
             this.lDuzina.AutoSize = true;
-            this.lDuzina.Location = new System.Drawing.Point(73, 221);
+            this.lDuzina.Location = new System.Drawing.Point(387, 39);
             this.lDuzina.Name = "lDuzina";
             this.lDuzina.Size = new System.Drawing.Size(43, 13);
             this.lDuzina.TabIndex = 9;
@@ -154,7 +154,7 @@
             // lPromjerKrila
             // 
             this.lPromjerKrila.AutoSize = true;
-            this.lPromjerKrila.Location = new System.Drawing.Point(49, 249);
+            this.lPromjerKrila.Location = new System.Drawing.Point(363, 67);
             this.lPromjerKrila.Name = "lPromjerKrila";
             this.lPromjerKrila.Size = new System.Drawing.Size(67, 13);
             this.lPromjerKrila.TabIndex = 10;
@@ -163,7 +163,7 @@
             // lGorivoSpremnik
             // 
             this.lGorivoSpremnik.AutoSize = true;
-            this.lGorivoSpremnik.Location = new System.Drawing.Point(13, 273);
+            this.lGorivoSpremnik.Location = new System.Drawing.Point(327, 91);
             this.lGorivoSpremnik.Name = "lGorivoSpremnik";
             this.lGorivoSpremnik.Size = new System.Drawing.Size(103, 13);
             this.lGorivoSpremnik.TabIndex = 11;
@@ -215,14 +215,14 @@
             // 
             // tbTezina
             // 
-            this.tbTezina.Location = new System.Drawing.Point(122, 192);
+            this.tbTezina.Location = new System.Drawing.Point(436, 10);
             this.tbTezina.Name = "tbTezina";
             this.tbTezina.Size = new System.Drawing.Size(178, 20);
             this.tbTezina.TabIndex = 20;
             // 
             // tbDuzina
             // 
-            this.tbDuzina.Location = new System.Drawing.Point(122, 218);
+            this.tbDuzina.Location = new System.Drawing.Point(436, 36);
             this.tbDuzina.Name = "tbDuzina";
             this.tbDuzina.Size = new System.Drawing.Size(178, 20);
             this.tbDuzina.TabIndex = 21;
@@ -230,7 +230,7 @@
             // lGorivoStanje
             // 
             this.lGorivoStanje.AutoSize = true;
-            this.lGorivoStanje.Location = new System.Drawing.Point(27, 296);
+            this.lGorivoStanje.Location = new System.Drawing.Point(341, 114);
             this.lGorivoStanje.Name = "lGorivoStanje";
             this.lGorivoStanje.Size = new System.Drawing.Size(89, 13);
             this.lGorivoStanje.TabIndex = 22;
@@ -239,7 +239,7 @@
             // lGorivo
             // 
             this.lGorivo.AutoSize = true;
-            this.lGorivo.Location = new System.Drawing.Point(75, 321);
+            this.lGorivo.Location = new System.Drawing.Point(389, 139);
             this.lGorivo.Name = "lGorivo";
             this.lGorivo.Size = new System.Drawing.Size(41, 13);
             this.lGorivo.TabIndex = 23;
@@ -247,21 +247,21 @@
             // 
             // tbPromjerKrila
             // 
-            this.tbPromjerKrila.Location = new System.Drawing.Point(122, 244);
+            this.tbPromjerKrila.Location = new System.Drawing.Point(436, 62);
             this.tbPromjerKrila.Name = "tbPromjerKrila";
             this.tbPromjerKrila.Size = new System.Drawing.Size(178, 20);
             this.tbPromjerKrila.TabIndex = 24;
             // 
             // tbGorivoSpremnik
             // 
-            this.tbGorivoSpremnik.Location = new System.Drawing.Point(122, 268);
+            this.tbGorivoSpremnik.Location = new System.Drawing.Point(436, 86);
             this.tbGorivoSpremnik.Name = "tbGorivoSpremnik";
             this.tbGorivoSpremnik.Size = new System.Drawing.Size(178, 20);
             this.tbGorivoSpremnik.TabIndex = 25;
             // 
             // tbGorivoStanje
             // 
-            this.tbGorivoStanje.Location = new System.Drawing.Point(122, 294);
+            this.tbGorivoStanje.Location = new System.Drawing.Point(436, 112);
             this.tbGorivoStanje.Name = "tbGorivoStanje";
             this.tbGorivoStanje.Size = new System.Drawing.Size(178, 20);
             this.tbGorivoStanje.TabIndex = 26;
@@ -277,14 +277,14 @@
             // cbGorivo
             // 
             this.cbGorivo.FormattingEnabled = true;
-            this.cbGorivo.Location = new System.Drawing.Point(122, 320);
+            this.cbGorivo.Location = new System.Drawing.Point(436, 138);
             this.cbGorivo.Name = "cbGorivo";
             this.cbGorivo.Size = new System.Drawing.Size(178, 21);
             this.cbGorivo.TabIndex = 29;
             // 
             // bSpremiNoviZrakoplov
             // 
-            this.bSpremiNoviZrakoplov.Location = new System.Drawing.Point(266, 397);
+            this.bSpremiNoviZrakoplov.Location = new System.Drawing.Point(580, 290);
             this.bSpremiNoviZrakoplov.Name = "bSpremiNoviZrakoplov";
             this.bSpremiNoviZrakoplov.Size = new System.Drawing.Size(75, 23);
             this.bSpremiNoviZrakoplov.TabIndex = 30;
@@ -330,14 +330,14 @@
             this.c.Controls.Add(this.tbMaxVisina);
             this.c.Location = new System.Drawing.Point(41, 42);
             this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(318, 349);
+            this.c.Size = new System.Drawing.Size(702, 209);
             this.c.TabIndex = 32;
             // 
             // frmNoviZrakoplov
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 428);
+            this.ClientSize = new System.Drawing.Size(777, 370);
             this.Controls.Add(this.c);
             this.Controls.Add(this.bSpremiNoviZrakoplov);
             this.Controls.Add(this.tbID);

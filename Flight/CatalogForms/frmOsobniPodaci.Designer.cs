@@ -248,7 +248,6 @@
             this.Controls.Add(this.lTelefon);
             this.Controls.Add(this.lOib);
             this.Name = "frmOsobniPodaci";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Osobni podaci";
             this.Load += new System.EventHandler(this.frmOsobniPodaci_Load);
             this.ResumeLayout(false);

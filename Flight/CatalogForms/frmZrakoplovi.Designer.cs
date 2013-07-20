@@ -42,7 +42,7 @@
             this.dgwZrakoplovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwZrakoplovi.Location = new System.Drawing.Point(12, 12);
             this.dgwZrakoplovi.Name = "dgwZrakoplovi";
-            this.dgwZrakoplovi.Size = new System.Drawing.Size(779, 376);
+            this.dgwZrakoplovi.Size = new System.Drawing.Size(753, 311);
             this.dgwZrakoplovi.TabIndex = 0;
             // 
             // bNoviZrakoplov
@@ -80,7 +80,7 @@
             this.c.Controls.Add(this.bNoviZrakoplov);
             this.c.Controls.Add(this.bObrisiZrakoplov);
             this.c.Controls.Add(this.bIzmjeniZrakoplov);
-            this.c.Location = new System.Drawing.Point(521, 394);
+            this.c.Location = new System.Drawing.Point(495, 326);
             this.c.Name = "c";
             this.c.Size = new System.Drawing.Size(270, 32);
             this.c.TabIndex = 4;
@@ -89,11 +89,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 438);
+            this.ClientSize = new System.Drawing.Size(777, 370);
             this.Controls.Add(this.c);
             this.Controls.Add(this.dgwZrakoplovi);
             this.Name = "frmZrakoplovi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zrakoplovi";
             this.Load += new System.EventHandler(this.frmZrakoplovi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwZrakoplovi)).EndInit();

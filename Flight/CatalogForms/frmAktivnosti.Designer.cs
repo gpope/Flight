@@ -82,7 +82,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvAktivnosti);
             this.Name = "frmAktivnosti";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aktivnosti";
             this.Load += new System.EventHandler(this.frmAktivnosti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAktivnosti)).EndInit();

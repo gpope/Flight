@@ -48,15 +48,28 @@ namespace Flight.CatalogForms
             }
             
         }
-
+        private CatalogForms.frmNoviZrakoplov z;
         private void bNoviZrakoplov_Click(object sender, EventArgs e)
         {
-            int id = 0;
-            CatalogForms.frmNoviZrakoplov nz = new frmNoviZrakoplov(id);
-            nz.ShowDialog();
-            refreshGridZrakoplovi();
+            if (z == null)
+            {
+                int id = 0;
+                z = new frmNoviZrakoplov(id);
+                z.MdiParent = this.MdiParent;
+                z.FormClosed += new FormClosedEventHandler(z_FormClosed);
+                z.Show();
+                //refreshGridZrakoplovi();
+            }
+            z.Focus();
         }
 
+        void z_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            z = null;
+            refreshGridZrakoplovi();
+            //throw new NotImplementedException();
+        }
+        private CatalogForms.frmNoviZrakoplov iz;
         private void bIzmjeniZrakoplov_Click(object sender, EventArgs e)
         {
             if (dgwZrakoplovi.SelectedRows.Count == 0)
@@ -64,11 +77,23 @@ namespace Flight.CatalogForms
             else
             {
                 int id = int.Parse(dgwZrakoplovi.SelectedRows[0].Cells[0].Value.ToString());
-
-                CatalogForms.frmNoviZrakoplov iz = new CatalogForms.frmNoviZrakoplov(id);
-                iz.ShowDialog();
-                refreshGridZrakoplovi();
+                if (iz == null)
+                {
+                    iz = new frmNoviZrakoplov(id);
+                    iz.MdiParent = this.MdiParent;
+                    iz.FormClosed += new FormClosedEventHandler(iz_FormClosed);
+                    iz.Show();
+                    //refreshGridZrakoplovi();
+                }
+                iz.Focus();
             }
+        }
+
+        void iz_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            iz = null;
+            refreshGridZrakoplovi();
+            //throw new NotImplementedException();
         }
         /// <summary>
         /// 

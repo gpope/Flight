@@ -15,7 +15,6 @@ namespace Flight.CatalogForms
         public frmKorisnici()
         {
             InitializeComponent();
-
         }
         
         flightnetEntities contex = new flightnetEntities();
@@ -59,8 +58,16 @@ namespace Flight.CatalogForms
         {
             int id = 0;
             CatalogForms.frmNoviKorisnik n = new CatalogForms.frmNoviKorisnik(id);
-            n.ShowDialog();
+            n.MdiParent = this.MdiParent;
+            n.Show();
+            n.FormClosed += new FormClosedEventHandler(n_FormClosed);
+            //refreshGrid();
+        }
+
+        void n_FormClosed(object sender, FormClosedEventArgs e)
+        {
             refreshGrid();
+            //throw new NotImplementedException();
         }
 
         //Selektiramo korisnika - redak u DataGridview-u
@@ -87,9 +94,17 @@ namespace Flight.CatalogForms
             {
                 int id = int.Parse(dgwKorisnici.SelectedRows[0].Cells[0].Value.ToString());
                 CatalogForms.frmNoviKorisnik i = new CatalogForms.frmNoviKorisnik(id);
-                i.ShowDialog();
-                refreshGrid();
+                i.MdiParent = this.MdiParent;
+                i.Show();
+                i.FormClosed += new FormClosedEventHandler(i_FormClosed);
+                //refreshGrid();
             }
+        }
+
+        void i_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            refreshGrid();
+            //throw new NotImplementedException();
         }
 
         /// <summary>
