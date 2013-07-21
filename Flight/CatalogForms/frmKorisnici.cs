@@ -109,7 +109,14 @@ namespace Flight.CatalogForms
         /// </summary> 
         private void bObrisiKorisnika_Click(object sender, EventArgs e)
         {
-            //ako nije selektiran korisnik za izmjenu
+            if (i != null)
+            {
+                MessageBox.Show("Ne možete obrisati korisnika ako je selektiran za ažuriranje");
+                i.Focus();
+            }
+            else
+            {
+                //ako nije selektiran korisnik za izmjenu
                 if (dgwKorisnici.SelectedRows.Count == 0)
                 {
                     MessageBox.Show("Niste selektirali korisnika!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -128,7 +135,7 @@ namespace Flight.CatalogForms
                         refreshGrid();
                     }
                 }
-                
+            }   
         }
 
     }

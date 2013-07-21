@@ -116,30 +116,38 @@ namespace Flight.CatalogForms
         /// </summary>
         private void bObrisiParaglajder_Click(object sender, EventArgs e)
         {
-            if (dgwParaglajderi.SelectedRows.Count == 0)
+            if (iz != null)
             {
-                MessageBox.Show("Niste selektirali paraglajder!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ne možete izbrisati paraglajder ako je selektiran za izmjenu!");
+                iz.Focus();
             }
-
             else
             {
-                int id = int.Parse(dgwParaglajderi.SelectedRows[0].Cells[0].Value.ToString());
-
-                var r = (from z in contex.Paraglajder where z.resurs_ID == id select z);
-                var zr = (from z in contex.Resurs where z.resurs_ID == id select z);
-
-                if (r.Count() > 0 && zr.Count() > 0)
+                if (dgwParaglajderi.SelectedRows.Count == 0)
                 {
-                    foreach (Paraglajder z in r)
+                    MessageBox.Show("Niste selektirali paraglajder!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                else
+                {
+                    int id = int.Parse(dgwParaglajderi.SelectedRows[0].Cells[0].Value.ToString());
+
+                    var r = (from z in contex.Paraglajder where z.resurs_ID == id select z);
+                    var zr = (from z in contex.Resurs where z.resurs_ID == id select z);
+
+                    if (r.Count() > 0 && zr.Count() > 0)
                     {
-                        contex.Paraglajder.Remove(z);
+                        foreach (Paraglajder z in r)
+                        {
+                            contex.Paraglajder.Remove(z);
+                        }
+                        foreach (Resurs z in zr)
+                        {
+                            contex.Resurs.Remove(z);
+                        }
+                        contex.SaveChanges();
+                        refreshGridParaglajderi();
                     }
-                    foreach (Resurs z in zr)
-                    {
-                        contex.Resurs.Remove(z);
-                    }
-                    contex.SaveChanges();
-                    refreshGridParaglajderi();
                 }
             }
         }

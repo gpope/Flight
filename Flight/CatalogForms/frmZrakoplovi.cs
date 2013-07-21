@@ -109,33 +109,40 @@ namespace Flight.CatalogForms
         /// </summary>
         private void bObrisiZrakoplov_Click(object sender, EventArgs e)
         {
-            if (dgwZrakoplovi.SelectedRows.Count == 0)
+            if (iz != null)
             {
-                MessageBox.Show("Niste selektirali zrakoplov!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ne možete izbrisati zrakoplov ako je selektiran za izmjenu!");
+                iz.Focus();
             }
-
             else
             {
-                int id = int.Parse(dgwZrakoplovi.SelectedRows[0].Cells[0].Value.ToString());
-
-                var r = (from z in contex.Zrakoplov where z.resurs_ID == id select z);
-                var zr = (from z in contex.Resurs where z.resurs_ID == id select z);
-
-                if (r.Count() > 0 && zr.Count() > 0)
+                if (dgwZrakoplovi.SelectedRows.Count == 0)
                 {
-                    foreach (Zrakoplov z in r)
+                    MessageBox.Show("Niste selektirali zrakoplov!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                else
+                {
+                    int id = int.Parse(dgwZrakoplovi.SelectedRows[0].Cells[0].Value.ToString());
+
+                    var r = (from z in contex.Zrakoplov where z.resurs_ID == id select z);
+                    var zr = (from z in contex.Resurs where z.resurs_ID == id select z);
+
+                    if (r.Count() > 0 && zr.Count() > 0)
                     {
-                        contex.Zrakoplov.Remove(z);
+                        foreach (Zrakoplov z in r)
+                        {
+                            contex.Zrakoplov.Remove(z);
+                        }
+                        foreach (Resurs z in zr)
+                        {
+                            contex.Resurs.Remove(z);
+                        }
+                        contex.SaveChanges();
+                        refreshGridZrakoplovi();
                     }
-                    foreach (Resurs z in zr)
-                    {
-                        contex.Resurs.Remove(z);
-                    }
-                    contex.SaveChanges();
-                    refreshGridZrakoplovi();
                 }
             }
-
         }
 
         
