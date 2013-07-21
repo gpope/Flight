@@ -65,7 +65,6 @@ namespace Flight.CatalogForms
             tbLozinka.Text = ki.lozinka;
             tbTelefon.Text = ki.telefon;
             //Treba još napuniti comboboxeve??????????
-            
         }
 
         /// <summary>

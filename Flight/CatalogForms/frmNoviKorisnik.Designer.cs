@@ -51,8 +51,10 @@
             this.lOib = new System.Windows.Forms.Label();
             this.lKorisnik_ID = new System.Windows.Forms.Label();
             this.tbKorisnik_ID = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ovlastiKorisnikaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.c.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ovlastiKorisnikaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,9 +79,9 @@
             this.c.Controls.Add(this.tbIme);
             this.c.Controls.Add(this.lTelefon);
             this.c.Controls.Add(this.lOib);
-            this.c.Location = new System.Drawing.Point(12, 45);
+            this.c.Location = new System.Drawing.Point(6, 45);
             this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(303, 294);
+            this.c.Size = new System.Drawing.Size(303, 282);
             this.c.TabIndex = 8;
             // 
             // lLozinka
@@ -243,7 +245,7 @@
             // lKorisnik_ID
             // 
             this.lKorisnik_ID.AutoSize = true;
-            this.lKorisnik_ID.Location = new System.Drawing.Point(57, 22);
+            this.lKorisnik_ID.Location = new System.Drawing.Point(51, 22);
             this.lKorisnik_ID.Name = "lKorisnik_ID";
             this.lKorisnik_ID.Size = new System.Drawing.Size(61, 13);
             this.lKorisnik_ID.TabIndex = 0;
@@ -251,12 +253,24 @@
             // 
             // tbKorisnik_ID
             // 
-            this.tbKorisnik_ID.Location = new System.Drawing.Point(132, 19);
+            this.tbKorisnik_ID.Location = new System.Drawing.Point(126, 19);
             this.tbKorisnik_ID.Name = "tbKorisnik_ID";
             this.tbKorisnik_ID.ReadOnly = true;
-            this.tbKorisnik_ID.Size = new System.Drawing.Size(154, 20);
+            this.tbKorisnik_ID.Size = new System.Drawing.Size(78, 20);
             this.tbKorisnik_ID.TabIndex = 8;
             this.tbKorisnik_ID.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.c);
+            this.groupBox1.Controls.Add(this.tbKorisnik_ID);
+            this.groupBox1.Controls.Add(this.lKorisnik_ID);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(332, 337);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Korisnik";
             // 
             // ovlastiKorisnikaBindingSource
             // 
@@ -267,17 +281,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 370);
-            this.Controls.Add(this.c);
-            this.Controls.Add(this.tbKorisnik_ID);
-            this.Controls.Add(this.lKorisnik_ID);
+            this.Controls.Add(this.groupBox1);
             this.Name = "frmNoviKorisnik";
             this.Text = "Novi korisnik";
             this.Load += new System.EventHandler(this.frmNoviKorisnik_Load);
             this.c.ResumeLayout(false);
             this.c.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ovlastiKorisnikaBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -306,5 +319,6 @@
         private System.Windows.Forms.Label lLozinka;
         private System.Windows.Forms.TextBox tbLozinka;
         private System.Windows.Forms.BindingSource ovlastiKorisnikaBindingSource;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
