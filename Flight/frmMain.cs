@@ -57,19 +57,19 @@ namespace Flight
 
         void k_FormClosed(object sender, FormClosedEventArgs e)
         {
+            k = null; 
             upaliAdminIzbornike();
-            z = null;
         }
 
         private CatalogForms.frmZrakoplovi z;
         private void zrakoploviToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if(z == null ){
-            z = new CatalogForms.frmZrakoplovi();
-            z.MdiParent = this;
-            z.Show();
-            ugasiAdminIzbornike();
-            z.FormClosed += new FormClosedEventHandler(z_FormClosed);
+                z = new CatalogForms.frmZrakoplovi();
+                z.MdiParent = this;
+                z.Show();
+                ugasiAdminIzbornike();
+                z.FormClosed += new FormClosedEventHandler(z_FormClosed);
             }
             z.Focus();
         }

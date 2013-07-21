@@ -44,7 +44,6 @@
             this.dgwKorisnici.Name = "dgwKorisnici";
             this.dgwKorisnici.Size = new System.Drawing.Size(750, 308);
             this.dgwKorisnici.TabIndex = 8;
-            this.dgwKorisnici.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwKorisnici_RowHeaderMouseClick);
             // 
             // bNoviKorisnik
             // 

@@ -16,10 +16,16 @@ namespace Flight.CatalogForms
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Datum iz dateTimePicker-a (dtpDatumRezervacije)
+        /// </summary>
         DateTime selectedDateC;
+
         flightnetEntities contex = new flightnetEntities();
 
-        //Letni zapisi iz db koji su aktivni
+        /// <summary>
+        /// Dobavlja podatke o aktivnim letovima iz baze i prikazuje ih u dataGridView-u (dgwAktivniLetovi)
+        /// </summary>
         private void refreshGridAktivniLetovi(){
 
             var aletovi = (from al in contex.Let
@@ -43,7 +49,9 @@ namespace Flight.CatalogForms
             dgwAktivniLetovi.DataSource = aletovi;
         }
 
-        //Letni zapisi iz db koji su završeni
+        /// <summary>
+        /// Dobavlja podatke o završenim letovima iz baze i prikazuje ih u dataGridView-u (dgwZavršeniLetovi)
+        /// </summary>
         private void refreshGridZavrseniLetovi() {
 
             var zletovi = (from zl in contex.Let   
@@ -67,7 +75,10 @@ namespace Flight.CatalogForms
             dgwZavrseni.DataSource = zletovi;
         }
        
-        //Prikazuje rezervacije za selektirani dautum
+        /// <summary>
+        /// Dobavlja rezervacije za selektirani datum iz baze i prikazuje ih u dataGridView-u (dgwRezervacije)
+        /// </summary>
+        /// <param name="selectedDateC">Selektirani datum</param>
         private void refreshGridRezervacijeDate(DateTime selectedDateC)
         {
 
@@ -96,6 +107,10 @@ namespace Flight.CatalogForms
             refreshGridRezervacijeDate(selectedDateC);
         }
 
+        private CatalogForms.frmNoviLetniZapis nlz;
+        /// <summary>
+        /// Za selektiranu rezervaciju otvara formu "novi letni zapis" koja se popunjava s podacima prije samog leta
+        /// </summary>
         private void bKreirajLetniZapis_Click(object sender, EventArgs e)
         {
             if (dgwRezervacije.SelectedRows.Count != 1)
@@ -103,21 +118,27 @@ namespace Flight.CatalogForms
             else
             {
                 int id = int.Parse(dgwRezervacije.SelectedRows[0].Cells[0].Value.ToString());
-                CatalogForms.frmNoviLetniZapis nlz = new CatalogForms.frmNoviLetniZapis(id);
-                nlz.MdiParent = this.MdiParent;
-                nlz.Show();
-                nlz.FormClosed += new FormClosedEventHandler(nlz_FormClosed);
-                //refreshGridAktivniLetovi();
+                if (nlz == null)
+                {
+                    nlz = new frmNoviLetniZapis(id);
+                    nlz.MdiParent = this.MdiParent;
+                    nlz.FormClosed += new FormClosedEventHandler(nlz_FormClosed);
+                    nlz.Show();           
+                }
+                nlz.Focus();
             }
-            refreshGridAktivniLetovi();
         }
 
         void nlz_FormClosed(object sender, FormClosedEventArgs e)
         {
+            nlz = null;
             refreshGridAktivniLetovi();
-            //throw new NotImplementedException();
         }
 
+        private CatalogForms.frmZatvoriLetniZapis zlz;
+        /// <summary>
+        /// Za selektirani aktivni let (letni zapis), otvara formu koja se popunjava s podacima nakon završetka leta
+        /// </summary>
         private void bZatvoriLetniZapis_Click(object sender, EventArgs e)
         {
             if (dgwAktivniLetovi.SelectedRows.Count != 1)
@@ -126,23 +147,22 @@ namespace Flight.CatalogForms
             }
             else {
                 int id = int.Parse(dgwAktivniLetovi.SelectedRows[0].Cells[0].Value.ToString());
-                CatalogForms.frmZatvoriLetniZapis zlz = new CatalogForms.frmZatvoriLetniZapis(id);
-                zlz.MdiParent = this.MdiParent;
-                zlz.Show();
-                zlz.FormClosed += new FormClosedEventHandler(zlz_FormClosed);
-                //refreshGridAktivniLetovi();
-                //refreshGridZavrseniLetovi();
+                if (zlz == null)
+                {
+                    zlz = new frmZatvoriLetniZapis(id);
+                    zlz.MdiParent = this.MdiParent;
+                    zlz.FormClosed += new FormClosedEventHandler(zlz_FormClosed);
+                    zlz.Show();
+                }
+                zlz.Focus();
             }
         }
 
         void zlz_FormClosed(object sender, FormClosedEventArgs e)
         {
+            zlz = null;
             refreshGridAktivniLetovi();
             refreshGridZavrseniLetovi();
-            //throw new NotImplementedException();
         }
-       
-
-
     }
 }

@@ -19,15 +19,14 @@ namespace Flight.CatalogForms
         
         flightnetEntities contex = new flightnetEntities();
 
-        /// <summary>
-        /// Za korisnike s ovlastima Član kluba i kontrolor ne prikazuje panel c koji sadrži
-        /// dugmad s dugmadima za kreiranje Novog, izmjenu postojećeg i brisanje postojećeg korisnika
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void frmKorisnici_Load(object sender, EventArgs e)
         {
             refreshGrid();
+
+            /// <summary>
+            /// Za korisnike s ovlastima Član kluba i kontrolor ne prikazuje panel c koji sadrži
+            /// dugmad s dugmadima za kreiranje Novog, izmjenu postojećeg i brisanje postojećeg korisnika
+            /// </summary>
             if (GlobalHelper.trenutna == GlobalHelper.TipOvlasti.Član)
             {
                 c.Visible = false;
@@ -39,7 +38,7 @@ namespace Flight.CatalogForms
         }
 
         /// <summary>
-        ///Popunjava dataGridView s podacima o korisnicima
+        ///Popunjava dataGridView (dgwKorisnici) s podacima o postojećim korisnicima
         /// </summary>
         public void refreshGrid(){
             var korisnici = (from k in contex.Korisnik 
@@ -49,39 +48,34 @@ namespace Flight.CatalogForms
             dgwKorisnici.DataSource = korisnici;
     
         }
+
         /// <summary>
         /// Otvara formu s poljima za unos podataka o novom korisniku
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        private CatalogForms.frmNoviKorisnik n;
         private void bNoviKorisnik_Click(object sender, EventArgs e)
         {
-            int id = 0;
-            CatalogForms.frmNoviKorisnik n = new CatalogForms.frmNoviKorisnik(id);
-            n.MdiParent = this.MdiParent;
-            n.Show();
-            n.FormClosed += new FormClosedEventHandler(n_FormClosed);
-            //refreshGrid();
+            if (n == null)
+            {
+                int id = 0;
+                n = new frmNoviKorisnik(id);
+                n.MdiParent = this.MdiParent;
+                n.FormClosed += new FormClosedEventHandler(n_FormClosed);
+                n.Show();
+            }
+            n.Focus();
         }
 
         void n_FormClosed(object sender, FormClosedEventArgs e)
         {
+            n = null;
             refreshGrid();
-            //throw new NotImplementedException();
         }
 
-        //Selektiramo korisnika - redak u DataGridview-u
-        private void dgwKorisnici_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            int id = int.Parse(dgwKorisnici.SelectedRows[0].Cells[0].Value.ToString());
-           
-        }
-
+        private CatalogForms.frmNoviKorisnik i;
         /// <summary>
-        /// Izmjena podataka o selektiranom korisniku
+        /// Otvara formu za izmjenu podataka o selektiranom korisniku
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void bIzmjeniKorisnika_Click(object sender, EventArgs e)
         {
             //ako nije selektiran korisnik za izmjenu
@@ -93,46 +87,48 @@ namespace Flight.CatalogForms
             else
             {
                 int id = int.Parse(dgwKorisnici.SelectedRows[0].Cells[0].Value.ToString());
-                CatalogForms.frmNoviKorisnik i = new CatalogForms.frmNoviKorisnik(id);
-                i.MdiParent = this.MdiParent;
-                i.Show();
-                i.FormClosed += new FormClosedEventHandler(i_FormClosed);
-                //refreshGrid();
+                if (i == null)
+                {
+                    i = new frmNoviKorisnik(id);
+                    i.MdiParent = this.MdiParent;
+                    i.FormClosed += new FormClosedEventHandler(i_FormClosed);
+                    i.Show();
+                }
+                i.Focus();
             }
         }
 
         void i_FormClosed(object sender, FormClosedEventArgs e)
         {
+            i = null;
             refreshGrid();
-            //throw new NotImplementedException();
         }
 
         /// <summary>
-        /// Brisanje selektrianog korisnika
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// Briše selektiranog korisnika iz baze
+        /// </summary> 
         private void bObrisiKorisnika_Click(object sender, EventArgs e)
         {
             //ako nije selektiran korisnik za izmjenu
-            if (dgwKorisnici.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Niste selektirali korisnika!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            //ako je korisnik selektiran
-            else
-            {
-                int id = int.Parse(dgwKorisnici.SelectedRows[0].Cells[0].Value.ToString());
-                var result = (from kzb in contex.Korisnik where kzb.korisnik_ID == id select kzb);
-
-                if (result.Count() > 0) {
-                    foreach(Korisnik k in result)
-                        contex.Korisnik.Remove(k);
-                    contex.SaveChanges();
+                if (dgwKorisnici.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Niste selektirali korisnika!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                //ako je korisnik selektiran
+                else
+                {
+                    int id = int.Parse(dgwKorisnici.SelectedRows[0].Cells[0].Value.ToString());
+                    var result = (from kzb in contex.Korisnik where kzb.korisnik_ID == id select kzb);
 
-                refreshGrid();
-            }
+                    if (result.Count() > 0)
+                    {
+                        foreach (Korisnik k in result)
+                            contex.Korisnik.Remove(k);
+                        contex.SaveChanges();
+                        refreshGrid();
+                    }
+                }
+                
         }
 
     }

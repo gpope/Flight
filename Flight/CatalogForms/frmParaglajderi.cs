@@ -19,6 +19,9 @@ namespace Flight.CatalogForms
 
         flightnetEntities contex = new flightnetEntities();
 
+        /// <summary>
+        /// Dobavlja iz baze podatke o paraglajderima i prikazuje ih u dataGridView-u (dgwParaglajderi)
+        /// </summary>
         public void refreshGridParaglajderi()
         {
 
@@ -57,14 +60,33 @@ namespace Flight.CatalogForms
 
         }
 
+        private CatalogForms.frmNoviParaglajder np;
+        /// <summary>
+        /// Otvara formu za unos novog paraglajdera
+        /// </summary>
         private void bNoviParaglajder_Click(object sender, EventArgs e)
         {
-            int id = 0;
-            CatalogForms.frmNoviParaglajder np = new CatalogForms.frmNoviParaglajder(id);
-            np.ShowDialog();
+            if (np == null)
+            {
+                int id = 0;
+                np = new frmNoviParaglajder(id);
+                np.MdiParent = this.MdiParent;
+                np.FormClosed += new FormClosedEventHandler(np_FormClosed);
+                np.Show();
+            }
+            np.Focus();
+        }
+
+        void np_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            np = null;
             refreshGridParaglajderi();
         }
 
+        private CatalogForms.frmNoviParaglajder iz;
+        /// <summary>
+        /// Otvara formu za izmjenu selektiranog paraglajdera
+        /// </summary>
         private void bIzmjeniParaglajder_Click(object sender, EventArgs e)
         {
             if (dgwParaglajderi.SelectedRows.Count == 0)
@@ -72,13 +94,26 @@ namespace Flight.CatalogForms
             else
             {
                 int id = int.Parse(dgwParaglajderi.SelectedRows[0].Cells[0].Value.ToString());
-
-                CatalogForms.frmNoviParaglajder iz = new CatalogForms.frmNoviParaglajder(id);
-                iz.ShowDialog();
-                refreshGridParaglajderi();
+                if (iz == null)
+                {
+                    iz = new frmNoviParaglajder(id);
+                    iz.MdiParent = this.MdiParent;
+                    iz.FormClosed += new FormClosedEventHandler(iz_FormClosed);
+                    iz.Show();
+                }
+                iz.Focus();
             }
         }
 
+        void iz_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            iz = null;
+            refreshGridParaglajderi();
+        }
+
+        /// <summary>
+        /// Briše selektirani paraglajder iz baze
+        /// </summary>
         private void bObrisiParaglajder_Click(object sender, EventArgs e)
         {
             if (dgwParaglajderi.SelectedRows.Count == 0)
@@ -98,12 +133,10 @@ namespace Flight.CatalogForms
                     foreach (Paraglajder z in r)
                     {
                         contex.Paraglajder.Remove(z);
-                        //contex.SaveChanges();
                     }
                     foreach (Resurs z in zr)
                     {
                         contex.Resurs.Remove(z);
-                        //contex.SaveChanges();
                     }
                     contex.SaveChanges();
                     refreshGridParaglajderi();

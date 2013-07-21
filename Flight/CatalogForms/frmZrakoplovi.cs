@@ -19,6 +19,9 @@ namespace Flight.CatalogForms
 
         flightnetEntities contex = new flightnetEntities();
 
+        /// <summary>
+        /// Dobavlja podatke o zrakoplovima iz baze i prikazuje ih u dataGridView-u (dgwZrakoplovi)
+        /// </summary>
         public void refreshGridZrakoplovi() {
             
             //Nisam ubacio slika_url...?!?!?
@@ -48,7 +51,11 @@ namespace Flight.CatalogForms
             }
             
         }
+
         private CatalogForms.frmNoviZrakoplov z;
+        /// <summary>
+        /// Otvara formu za unos novog zrakoplova
+        /// </summary>
         private void bNoviZrakoplov_Click(object sender, EventArgs e)
         {
             if (z == null)
@@ -58,7 +65,6 @@ namespace Flight.CatalogForms
                 z.MdiParent = this.MdiParent;
                 z.FormClosed += new FormClosedEventHandler(z_FormClosed);
                 z.Show();
-                //refreshGridZrakoplovi();
             }
             z.Focus();
         }
@@ -67,9 +73,12 @@ namespace Flight.CatalogForms
         {
             z = null;
             refreshGridZrakoplovi();
-            //throw new NotImplementedException();
         }
+
         private CatalogForms.frmNoviZrakoplov iz;
+        /// <summary>
+        /// Otvara formu za izmjenu selektiranog zrakoplova
+        /// </summary>
         private void bIzmjeniZrakoplov_Click(object sender, EventArgs e)
         {
             if (dgwZrakoplovi.SelectedRows.Count == 0)
@@ -93,13 +102,11 @@ namespace Flight.CatalogForms
         {
             iz = null;
             refreshGridZrakoplovi();
-            //throw new NotImplementedException();
         }
+
         /// <summary>
-        /// 
+        /// Briše selektirani zrakoplov iz baze
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void bObrisiZrakoplov_Click(object sender, EventArgs e)
         {
             if (dgwZrakoplovi.SelectedRows.Count == 0)
@@ -119,12 +126,10 @@ namespace Flight.CatalogForms
                     foreach (Zrakoplov z in r)
                     {
                         contex.Zrakoplov.Remove(z);
-                        //contex.SaveChanges();
                     }
                     foreach (Resurs z in zr)
                     {
                         contex.Resurs.Remove(z);
-                        //contex.SaveChanges();
                     }
                     contex.SaveChanges();
                     refreshGridZrakoplovi();
