@@ -171,7 +171,7 @@
             // oFlightNETToolStripMenuItem
             // 
             this.oFlightNETToolStripMenuItem.Name = "oFlightNETToolStripMenuItem";
-            this.oFlightNETToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.oFlightNETToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.oFlightNETToolStripMenuItem.Text = "O Flight.NET";
             this.oFlightNETToolStripMenuItem.Click += new System.EventHandler(this.oFlightNETToolStripMenuItem_Click);
             // 
@@ -184,29 +184,31 @@
             this.flpMainClanovi.Controls.Add(this.bOsobno);
             this.flpMainClanovi.Controls.Add(this.bCijene);
             this.flpMainClanovi.Controls.Add(this.bNagradeO);
-            this.flpMainClanovi.Location = new System.Drawing.Point(105, 106);
+            this.flpMainClanovi.Location = new System.Drawing.Point(110, 153);
             this.flpMainClanovi.Name = "flpMainClanovi";
-            this.flpMainClanovi.Size = new System.Drawing.Size(682, 190);
+            this.flpMainClanovi.Size = new System.Drawing.Size(682, 189);
             this.flpMainClanovi.TabIndex = 1;
             // 
             // bZrakoplov
             // 
+            this.bZrakoplov.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.bZrakoplov.Location = new System.Drawing.Point(3, 3);
             this.bZrakoplov.Name = "bZrakoplov";
             this.bZrakoplov.Size = new System.Drawing.Size(104, 182);
             this.bZrakoplov.TabIndex = 0;
             this.bZrakoplov.Text = "Zrakoplovi";
-            this.bZrakoplov.UseVisualStyleBackColor = true;
+            this.bZrakoplov.UseVisualStyleBackColor = false;
             this.bZrakoplov.Click += new System.EventHandler(this.bZrakoplov_Click);
             // 
             // bParaglajder
             // 
+            this.bParaglajder.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.bParaglajder.Location = new System.Drawing.Point(113, 3);
             this.bParaglajder.Name = "bParaglajder";
             this.bParaglajder.Size = new System.Drawing.Size(104, 182);
             this.bParaglajder.TabIndex = 5;
             this.bParaglajder.Text = "Paraglajderi";
-            this.bParaglajder.UseVisualStyleBackColor = true;
+            this.bParaglajder.UseVisualStyleBackColor = false;
             this.bParaglajder.Click += new System.EventHandler(this.bParaglajder_Click);
             // 
             // bRezervacije
@@ -223,32 +225,35 @@
             // 
             // bOsobno
             // 
+            this.bOsobno.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.bOsobno.Location = new System.Drawing.Point(335, 3);
             this.bOsobno.Name = "bOsobno";
             this.bOsobno.Size = new System.Drawing.Size(109, 182);
             this.bOsobno.TabIndex = 2;
             this.bOsobno.Text = "Osobni podaci";
-            this.bOsobno.UseVisualStyleBackColor = true;
+            this.bOsobno.UseVisualStyleBackColor = false;
             this.bOsobno.Click += new System.EventHandler(this.bOsobno_Click);
             // 
             // bCijene
             // 
+            this.bCijene.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.bCijene.Location = new System.Drawing.Point(450, 3);
             this.bCijene.Name = "bCijene";
             this.bCijene.Size = new System.Drawing.Size(109, 182);
             this.bCijene.TabIndex = 3;
             this.bCijene.Text = "Cijene";
-            this.bCijene.UseVisualStyleBackColor = true;
+            this.bCijene.UseVisualStyleBackColor = false;
             this.bCijene.Click += new System.EventHandler(this.bCijene_Click);
             // 
             // bNagradeO
             // 
+            this.bNagradeO.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.bNagradeO.Location = new System.Drawing.Point(565, 3);
             this.bNagradeO.Name = "bNagradeO";
             this.bNagradeO.Size = new System.Drawing.Size(109, 182);
             this.bNagradeO.TabIndex = 4;
             this.bNagradeO.Text = "Aktivnosti";
-            this.bNagradeO.UseVisualStyleBackColor = true;
+            this.bNagradeO.UseVisualStyleBackColor = false;
             this.bNagradeO.Click += new System.EventHandler(this.bNagradeO_Click);
             // 
             // toolStripStatusLabel1
@@ -372,7 +377,7 @@
             this.flpAdmin.Controls.Add(this.bClanarine);
             this.flpAdmin.Controls.Add(this.bCjenik);
             this.flpAdmin.Controls.Add(this.bNagrade);
-            this.flpAdmin.Location = new System.Drawing.Point(120, 348);
+            this.flpAdmin.Location = new System.Drawing.Point(125, 348);
             this.flpAdmin.Name = "flpAdmin";
             this.flpAdmin.Size = new System.Drawing.Size(649, 85);
             this.flpAdmin.TabIndex = 3;

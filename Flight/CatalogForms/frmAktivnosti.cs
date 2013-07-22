@@ -30,7 +30,7 @@ namespace Flight.CatalogForms
                           KorisnikID = a.korisnik_ID,
                           Ime = a.Korisnik.ime,
                           Prezime = a.Korisnik.prezime,
-                          Sati =  a.trajanje_leta
+                          Sati = a.trajanje_leta
                       }
             ).ToList();
             
