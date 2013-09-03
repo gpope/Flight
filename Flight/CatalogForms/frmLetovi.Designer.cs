@@ -154,7 +154,7 @@
             this.dgwZavrseni.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwZavrseni.Location = new System.Drawing.Point(6, 6);
             this.dgwZavrseni.Name = "dgwZavrseni";
-            this.dgwZavrseni.Size = new System.Drawing.Size(732, 307);
+            this.dgwZavrseni.Size = new System.Drawing.Size(732, 275);
             this.dgwZavrseni.TabIndex = 2;
             // 
             // frmLetovi

@@ -52,6 +52,7 @@ namespace Flight.CatalogForms
             if (GlobalHelper.trenutna == GlobalHelper.TipOvlasti.Član)
             {
                 c.Visible = false;
+                this.CenterToScreen();
             }
             if (GlobalHelper.trenutna == GlobalHelper.TipOvlasti.Kontrolor)
             {

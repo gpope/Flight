@@ -47,7 +47,6 @@
             this.bRezervacije = new System.Windows.Forms.Button();
             this.bOsobno = new System.Windows.Forms.Button();
             this.bCijene = new System.Windows.Forms.Button();
-            this.bNagradeO = new System.Windows.Forms.Button();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslIme = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslPrezime = new System.Windows.Forms.ToolStripStatusLabel();
@@ -62,7 +61,6 @@
             this.bKorisnici = new System.Windows.Forms.Button();
             this.flpAdmin = new System.Windows.Forms.FlowLayoutPanel();
             this.bCjenik = new System.Windows.Forms.Button();
-            this.bNagrade = new System.Windows.Forms.Button();
             this.msMain.SuspendLayout();
             this.flpMainClanovi.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -183,10 +181,9 @@
             this.flpMainClanovi.Controls.Add(this.bRezervacije);
             this.flpMainClanovi.Controls.Add(this.bOsobno);
             this.flpMainClanovi.Controls.Add(this.bCijene);
-            this.flpMainClanovi.Controls.Add(this.bNagradeO);
-            this.flpMainClanovi.Location = new System.Drawing.Point(110, 153);
+            this.flpMainClanovi.Location = new System.Drawing.Point(177, 153);
             this.flpMainClanovi.Name = "flpMainClanovi";
-            this.flpMainClanovi.Size = new System.Drawing.Size(682, 189);
+            this.flpMainClanovi.Size = new System.Drawing.Size(563, 189);
             this.flpMainClanovi.TabIndex = 1;
             // 
             // bZrakoplov
@@ -244,17 +241,6 @@
             this.bCijene.Text = "Cijene";
             this.bCijene.UseVisualStyleBackColor = false;
             this.bCijene.Click += new System.EventHandler(this.bCijene_Click);
-            // 
-            // bNagradeO
-            // 
-            this.bNagradeO.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.bNagradeO.Location = new System.Drawing.Point(565, 3);
-            this.bNagradeO.Name = "bNagradeO";
-            this.bNagradeO.Size = new System.Drawing.Size(109, 182);
-            this.bNagradeO.TabIndex = 4;
-            this.bNagradeO.Text = "Aktivnosti";
-            this.bNagradeO.UseVisualStyleBackColor = false;
-            this.bNagradeO.Click += new System.EventHandler(this.bNagradeO_Click);
             // 
             // toolStripStatusLabel1
             // 
@@ -376,10 +362,9 @@
             this.flpAdmin.Controls.Add(this.bLetovi);
             this.flpAdmin.Controls.Add(this.bClanarine);
             this.flpAdmin.Controls.Add(this.bCjenik);
-            this.flpAdmin.Controls.Add(this.bNagrade);
-            this.flpAdmin.Location = new System.Drawing.Point(125, 348);
+            this.flpAdmin.Location = new System.Drawing.Point(172, 348);
             this.flpAdmin.Name = "flpAdmin";
-            this.flpAdmin.Size = new System.Drawing.Size(649, 85);
+            this.flpAdmin.Size = new System.Drawing.Size(568, 85);
             this.flpAdmin.TabIndex = 3;
             // 
             // bCjenik
@@ -391,16 +376,6 @@
             this.bCjenik.Text = "Cjenik";
             this.bCjenik.UseVisualStyleBackColor = true;
             this.bCjenik.Click += new System.EventHandler(this.bCjenik_Click);
-            // 
-            // bNagrade
-            // 
-            this.bNagrade.Location = new System.Drawing.Point(570, 3);
-            this.bNagrade.Name = "bNagrade";
-            this.bNagrade.Size = new System.Drawing.Size(75, 79);
-            this.bNagrade.TabIndex = 7;
-            this.bNagrade.Text = "Aktivnosti";
-            this.bNagrade.UseVisualStyleBackColor = true;
-            this.bNagrade.Click += new System.EventHandler(this.bNagrade_Click);
             // 
             // frmMain
             // 
@@ -461,9 +436,7 @@
         private System.Windows.Forms.Button bLetovi;
         private System.Windows.Forms.Button bClanarine;
         private System.Windows.Forms.Button bCjenik;
-        private System.Windows.Forms.Button bNagrade;
         private System.Windows.Forms.Button bCijene;
-        private System.Windows.Forms.Button bNagradeO;
         private System.Windows.Forms.Button bParaglajder;
         private System.Windows.Forms.ToolStripMenuItem cjenikToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oFlightNETToolStripMenuItem;

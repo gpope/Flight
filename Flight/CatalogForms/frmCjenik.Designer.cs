@@ -180,7 +180,7 @@
             this.Controls.Add(this.dgvCjenik);
             this.Controls.Add(this.lbResurs);
             this.Controls.Add(this.label2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MinimumSize = new System.Drawing.Size(793, 408);
             this.Name = "frmCjenik";
             this.Text = "Cjenik";
             this.Load += new System.EventHandler(this.frmCjenik_Load);

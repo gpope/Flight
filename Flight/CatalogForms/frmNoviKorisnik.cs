@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -42,7 +44,21 @@ namespace Flight.CatalogForms
 
                 contex.Korisnik.Add(k);
                 contex.SaveChanges();
-    
+
+                //Slanje emaila novom korisniku
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress("admin@aero.hr");
+                mail.To.Add(new MailAddress(tbEmail.Text));
+                mail.Subject = "Aero klub - registracija";
+                mail.Body = "Poštovani " + tbIme.Text + " " + tbPrezime.Text + ",\ndobro došli u Aero klub FOI.\n\nVaše korisničko ime: " + tbEmail.Text + "\nVaša lozinka: " + tbLozinka.Text + "\n\nUgodan let!\nAero klub FOI";
+
+                var client = new SmtpClient("smtp.gmail.com", 587)
+                {
+                    Credentials = new NetworkCredential("aeroklubfoi@gmail.com", "programsko2013"),
+                    EnableSsl = true
+                };
+                client.Send(mail);
+
                 this.Close();                  
         
         }
@@ -74,6 +90,9 @@ namespace Flight.CatalogForms
             Korisnik ki = (from kr in contex.Korisnik
                            where kr.korisnik_ID == idk
                            select kr).FirstOrDefault();
+            //Ako promjeni lozinku šalje se email o promjeni
+            string staralozinka = ki.lozinka;
+
             ki.ime = tbIme.Text.Trim();
             ki.prezime = tbPrezime.Text.Trim();
             ki.lozinka = tbLozinka.Text.Trim();
@@ -83,9 +102,27 @@ namespace Flight.CatalogForms
             ki.oib = tbOib.Text.Trim();
             ki.status_korisnika_ID = (cbStatusKorisnika.SelectedValue as StatusKorisnika).status_korisnika_ID;
             ki.ovlasti_korisnika_ID = (cbOvlastiKorisnika.SelectedValue as OvlastiKorisnika).ovlasti_korisnika_ID;
-            
+
             contex.SaveChanges();
-       
+
+            //Slanje emaila korisniku o novim pristupnim podacima
+            
+            if (staralozinka != tbLozinka.Text)
+            {
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress("admin@aero.hr");
+                mail.To.Add(new MailAddress(tbEmail.Text));
+                mail.Subject = "Aero klub - promjena lozinke";
+                mail.Body = "Poštovani " + tbIme.Text + " " + tbPrezime.Text + ",\nvaša lozinka je promjenjena.\n\nVaše korisničko ime: " + tbEmail.Text + "\nVaša lozinka: " + tbLozinka.Text + "\n\nUgodan let!\nAero klub FOI";
+
+                var client = new SmtpClient("smtp.gmail.com", 587)
+                {
+                    Credentials = new NetworkCredential("aeroklubfoi@gmail.com", "programsko2013"),
+                    EnableSsl = true
+                };
+                client.Send(mail);
+            }
+            
             this.Close(); 
         }
 

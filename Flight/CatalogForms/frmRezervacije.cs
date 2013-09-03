@@ -59,6 +59,11 @@ namespace Flight.CatalogForms
            // refreshGridRezervacije();
             selectedDateC = DateTime.Parse(dtpDatumRezervacije.Text);
             refreshGridRezervacijeDate(selectedDateC);
+            if (GlobalHelper.trenutna == GlobalHelper.TipOvlasti.Član)
+            {
+               
+                this.CenterToScreen();
+            }
         }
 
         private void bRezerviraj_Click(object sender, EventArgs e)

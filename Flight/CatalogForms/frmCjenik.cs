@@ -35,6 +35,8 @@ namespace Flight.CatalogForms
             {
                 c.Visible = false;
                 c1.Visible = false;
+                this.CenterToScreen();
+
             }
             if (GlobalHelper.trenutna == GlobalHelper.TipOvlasti.Kontrolor)
             {
@@ -51,7 +53,7 @@ namespace Flight.CatalogForms
                 Letjelica = c.Resurs.naziv, 
                 Cjena = c.cjena,
                 Datum_od = c.datum_od,
-                Datum_do = c.datum_od
+                Datum_do = c.datum_do
             
             }).ToList();
             dgvCjenik.DataSource = cr;

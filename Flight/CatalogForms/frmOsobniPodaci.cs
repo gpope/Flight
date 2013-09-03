@@ -20,6 +20,12 @@ namespace Flight.CatalogForms
 
         private void frmOsobniPodaci_Load(object sender, EventArgs e)
         {
+            if (GlobalHelper.trenutna == GlobalHelper.TipOvlasti.Član)
+            {
+
+                this.CenterToScreen();
+            }
+
             Korisnik op = (from k in contex.Korisnik where k.korisnik_ID == GlobalHelper.userID select k).FirstOrDefault();
 
             tbKorisnik_ID.Text = op.korisnik_ID.ToString();

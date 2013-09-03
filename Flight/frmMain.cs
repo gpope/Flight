@@ -195,13 +195,14 @@ namespace Flight
             if (GlobalHelper.trenutna == GlobalHelper.TipOvlasti.Član)
             {
                 msMain.Visible = false;
-                flpAdmin.Visible = false;
+                flpAdmin.Visible = true;
               
             }
 
             if (GlobalHelper.trenutna == GlobalHelper.TipOvlasti.Kontrolor)
             {
-                flpMainClanovi.Visible = false;
+                flpMainClanovi.Visible = true;
+                flpAdmin.Visible = false;
             }
 
             if (GlobalHelper.trenutna == GlobalHelper.TipOvlasti.Admin) {
@@ -227,7 +228,7 @@ namespace Flight
         private void bRezervacije_Click(object sender, EventArgs e)
         {
             CatalogForms.frmRezervacije r = new CatalogForms.frmRezervacije();
-            r.Show();
+            r.ShowDialog();
         }
 
         private void bNagradeO_Click(object sender, EventArgs e)
