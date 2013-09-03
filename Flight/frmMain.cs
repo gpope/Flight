@@ -195,13 +195,13 @@ namespace Flight
             if (GlobalHelper.trenutna == GlobalHelper.TipOvlasti.Član)
             {
                 msMain.Visible = false;
-                flpAdmin.Visible = true;
+                flpAdmin.Visible = false;
               
             }
 
             if (GlobalHelper.trenutna == GlobalHelper.TipOvlasti.Kontrolor)
             {
-                flpMainClanovi.Visible = true;
+                flpMainClanovi.Visible = false;
                 flpAdmin.Visible = false;
             }
 
